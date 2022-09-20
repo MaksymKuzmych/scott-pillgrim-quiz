@@ -40,7 +40,7 @@ a {
   width: 5.125vw;
   position: relative;
   text-align: center;
-  border: 1px solid #ffffff;
+  border: 1.5px solid #ffffff;
   border-radius: 2px;
   padding: 1px;
 }
@@ -252,7 +252,7 @@ a {
   width: 22.875vw;
   border: 1px solid #fa6f32;
   border-radius: 5px;
-  margin: 0.625vw 0;
+  margin: 0.62vw 0;
   padding: 0.5px;
 }
 
@@ -291,6 +291,7 @@ a {
 
 .choose-favorite__btn {
   margin: 4.375vw 0 6.25vw;
+  background-color: #fe9013;
 }
 
 .palm-img {
@@ -305,4 +306,119 @@ a {
   right: 0;
   bottom: 0;
   width: 23vw;
+}
+
+/*FOURTH SECTION*/
+
+.fourth-section {
+  background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #febdab 100.95%, rgba(254, 210, 144, 0.7) 106.36%),
+    linear-gradient(
+      315.75deg,
+      rgba(254, 189, 171, 0.74) 30.06%,
+      rgba(243, 169, 248, 0.66) 50.74%,
+      #e0d8f0 80.49%,
+      #eaf7fe 127.9%,
+      #eaf7fe 149.54%
+    ),
+    linear-gradient(
+      315.75deg,
+      rgba(254, 189, 171, 0.74) 30.06%,
+      rgba(243, 169, 248, 0.66) 50.74%,
+      #e0d8f0 80.49%,
+      #eaf7fe 127.9%,
+      #eaf7fe 149.54%
+    );
+  display: flex;
+  padding: 4.375vw 0 6.25vw;
+}
+
+.pick-and-feed {
+  margin: 0 13.75vw;
+  padding: 2.5625vw 0 3.75vw;
+  background: rgba(253, 253, 255, 0.52);
+  backdrop-filter: blur(2px);
+  border-radius: 20px;
+}
+
+.pick-and-feed__title {
+  margin-bottom: 1.875vw;
+  font-weight: 400;
+  font-size: 3vw;
+  line-height: 120%;
+  text-align: center;
+  color: #fe9013;
+}
+
+.pick-and-feed__main-text {
+  margin-left: 6.25vw;
+  font-weight: 400;
+  font-size: 1.5vw;
+  line-height: 120%;
+  color: #333b41;
+}
+
+.pick-and-feed__text_bold {
+  margin: 2.5vw 0 0.625vw 6.25vw;
+  font-weight: 500;
+  font-size: 1vw;
+  line-height: 130%;
+  color: #333b41;
+}
+
+.pick-and-feed__text {
+  margin: 0 12.4vw 0 6.25vw;
+  font-weight: 400;
+  font-size: 1vw;
+  line-height: 130%;
+  color: #333b41;
+}
+
+.pick-and-feed__subtitle {
+  text-align: center;
+  margin: 3.75vw 0 2.5vw;
+  font-weight: 400;
+  font-size: 2.25vw;
+  line-height: 130%;
+  color: #333b41;
+}
+
+.pick-and-feed__steps {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 12.4vw;
+}
+
+.pick-and-feed__step {
+  width: 10.5vw;
+}
+
+.step-img__wrapper {
+  height: 10.5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.875vw;
+  background: #ffffff;
+  border: 1px solid #f9804b;
+  border-radius: 5px;
+}
+
+.step__text {
+  font-weight: 400;
+  font-size: 1vw;
+  line-height: 140%;
+  color: #333b41;
+}
+
+.arrow-img__first {
+  margin-bottom: 5.1vw;
+}
+
+.arrow-img__second {
+  margin-bottom: 5.625vw;
+}
+
+.pick-and-feed__btn {
+  display: block;
+  margin: 3.75vw auto 0;
 }

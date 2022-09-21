@@ -40,9 +40,9 @@ a {
   width: 5.125vw;
   position: relative;
   text-align: center;
-  border: 1.5px solid #ffffff;
+  border: 1px solid #ffffff;
   border-radius: 2px;
-  padding: 1px;
+  padding: 1px 0 2px;
 }
 
 .logo__title {
@@ -403,11 +403,27 @@ a {
   border-radius: 5px;
 }
 
+.step-img_pay {
+  width: 6.75vw;
+}
+
+.step-img_zoo {
+  width: 5.36vw;
+}
+
+.step-img_monkey {
+  width: 7.8vw;
+}
+
 .step__text {
   font-weight: 400;
   font-size: 1vw;
   line-height: 140%;
   color: #333b41;
+}
+
+.arrow-img {
+  width: 4.3125vw;
 }
 
 .arrow-img__first {
@@ -426,7 +442,9 @@ a {
 /*FIFTH SECTION*/
 
 .fifth-section {
-  padding: 8.75vw 13.75vw 12.75vw;
+  padding: 8.75vw 13.75vw 11.25vw;
+  position: relative;
+  overflow: hidden;
 }
 
 .testimonials {
@@ -548,5 +566,126 @@ a {
 
 .testimonials__btn {
   align-self: start;
-  border-radius: 0;
+  border-radius: 5px;
+}
+
+.leaf-img {
+  position: absolute;
+  bottom: -8.3vw;
+  right: 0;
+  width: 15.4375vw;
+}
+
+/*FOOTER*/
+
+.footer {
+  background: #111115;
+  color: white;
+  padding: 2.5vw 13.75vw 3.125vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__logo {
+  margin-bottom: 4.25vw;
+}
+
+.footer__btn {
+  border-radius: 5px;
+  margin-bottom: 3vw;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625vw;
+}
+
+.link {
+  display: flex;
+  font-weight: 400;
+  font-size: 1vw;
+  line-height: 140%;
+}
+
+.link-text {
+  align-self: center;
+}
+
+.icon__wrapper {
+  width: 1.625vw;
+  height: 1.625vw;
+  margin-right: 0.75vw;
+  background: rgba(196, 196, 196, 0.5);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon__facebook {
+  width: 0.5vw;
+}
+
+.icon__twitter {
+  width: 1vw;
+}
+
+.icon__instagram {
+  width: 1vw;
+}
+
+.footer__menu {
+  align-self: end;
+}
+
+.icon__youtube {
+  width: 1.125vw;
+}
+
+.footer__subscribe {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.subscribe__title {
+  font-weight: 400;
+  font-size: 1.5vw;
+  line-height: 120%;
+  margin-bottom: 0.875vw;
+}
+
+.subscribe__input {
+  width: 14.25vw;
+  padding: 0.625vw;
+  border: 1px solid #f9804b;
+  background-color: #111115;
+  color: #bdbdbd;
+  margin-right: 0.425vw;
+  font-weight: 400;
+  font-size: 1vw;
+  line-height: 140%;
+}
+
+.subscribe__submit {
+  width: 8.0625vw;
+  height: 2.625vw;
+  font-weight: 400;
+  font-size: 1vw;
+  line-height: 140%;
+  color: #4b9200;
+  border: 1px solid #4b9200;
+  border-radius: 5px;
+}
+
+.footer__copyright {
+  align-self: end;
+  font-weight: 100;
+  font-size: 1vw;
+  line-height: 160%;
+}
+
+.copyright__year {
+  margin-top: 0.25vw;
 }

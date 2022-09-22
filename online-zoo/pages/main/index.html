@@ -13,26 +13,26 @@
   </head>
   <body>
     <section class="first-section">
-      <header class="header">
-        <div class="logo">
-          <h1 class="logo__title">PetStory online</h1>
-          <img src="../../assets/icons/bamboo.svg" alt="bamboo" class="logo__icon" />
+      <div class="header__wrapper">
+        <header class="header">
+          <h1 class="logo__title">PetStory <span class="logo__img">o</span>nline</h1>
+          <nav class="menu">
+            <ul class="menu__list list">
+              <li class="menu__item item"><a href="#" class="item item_active">About</a></li>
+              <li class="menu__item item"><a href="#" class="item">Map</a></li>
+              <li class="menu__item item"><a href="#" class="item">Zoos</a></li>
+              <li class="menu__item item"><a href="#" class="item">Donate</a></li>
+              <li class="menu__item item"><a href="#" class="item">Contact us</a></li>
+            </ul>
+          </nav>
+          <div class="copyright">Designed by ©</div>
+        </header>
+      </div>
+      <div class="watch-favorite__wrapper">
+        <div class="watch-favorite">
+          <h2 class="watch-favorite__title">Watch your <span class="watch-favorite__title_yellow">favorite</span> animal online</h2>
+          <button class="watch-favorite__btn btn">Watch online</button>
         </div>
-        <nav class="menu">
-          <ul class="menu__list list">
-            <li class="menu__item item"><a href="#" class="item item_active">About</a></li>
-            <li class="menu__item item"><a href="#" class="item">Map</a></li>
-            <li class="menu__item item"><a href="#" class="item">Zoos</a></li>
-            <li class="menu__item item"><a href="#" class="item">Donate</a></li>
-            <li class="menu__item item"><a href="#" class="item">Contact us</a></li>
-          </ul>
-        </nav>
-        <div class="copyright">Designed by ©</div>
-      </header>
-      <div class="watch-favorite">
-        <div class="watch-favorite__ellipse"></div>
-        <h2 class="watch-favorite__title">Watch your <span class="watch-favorite__title_yellow">favorite</span> animal online</h2>
-        <button class="watch-favorite__btn btn">Watch online</button>
       </div>
     </section>
     <section class="second-section">
@@ -50,9 +50,6 @@
             These have a total of more than 1,500 mammals and reptiles.
           </p>
         </div>
-      </div>
-      <div class="flower-wrapper">
-        <img src="../../assets/images/flower.png" alt="flower" class="flower-img" />
       </div>
     </section>
     <section class="third-section">
@@ -131,8 +128,6 @@
         </div>
       </div>
       <button class="choose-favorite__btn btn">Choose your favorite</button>
-      <img src="../../assets/images/palm.png" alt="Palm" class="palm-img" />
-      <img src="../../assets/images/strelitzia.png" alt="Strelitzia" class="strelitzia-img" />
     </section>
     <section class="fourth-section">
       <div class="pick-and-feed">
@@ -144,7 +139,7 @@
         </p>
         <p class="pick-and-feed__text">
           Even though the zoo has reopened, we need you now more than ever to help us deal with these problems. Please consider a gift to
-          our Emergency Support Fund .
+          our <span class="pick-and-feed__text_underline"> Emergency Support Fund</span> .
         </p>
         <h4 class="pick-and-feed__subtitle">How it works</h4>
         <div class="pick-and-feed__steps">
@@ -181,7 +176,7 @@
               <img src="../../assets/icons/user_icon.svg" alt="user" class="testimonial__img" />
               <div class="testimonial__info">
                 <h5 class="testimonial__name">Michael John</h5>
-                <p class="testimonial__location">Local Austria • Today</p>
+                <p class="testimonial__location">Local Austria &nbsp•&nbsp Today</p>
               </div>
             </div>
             <p class="testimonial__text">
@@ -197,7 +192,7 @@
               <img src="../../assets/images/man.png" alt="user" class="testimonial__img" />
               <div class="testimonial__info">
                 <h5 class="testimonial__name">Oskar Samborsky</h5>
-                <p class="testimonial__location">Local Austria • Yesterday</p>
+                <p class="testimonial__location">Local Austria &nbsp•&nbsp Yesterday</p>
               </div>
             </div>
             <p class="testimonial__text">
@@ -215,7 +210,7 @@
               <img src="../../assets/images/woman-1.png" alt="user" class="testimonial__img" />
               <div class="testimonial__info">
                 <h5 class="testimonial__name">Fredericka Michelin</h5>
-                <p class="testimonial__location">Local Austria • Yesterday</p>
+                <p class="testimonial__location">Local Austria &nbsp•&nbsp Yesterday</p>
               </div>
             </div>
             <p class="testimonial__text">
@@ -232,7 +227,7 @@
               <img src="../../assets/images/woman-2.png" alt="user" class="testimonial__img" />
               <div class="testimonial__info">
                 <h5 class="testimonial__name">Mila Riksha</h5>
-                <p class="testimonial__location">Local Austria • Yesterday</p>
+                <p class="testimonial__location">Local Austria &nbsp•&nbsp Yesterday</p>
               </div>
             </div>
             <p class="testimonial__text">
@@ -251,53 +246,52 @@
         </div>
         <button class="testimonials__btn btn">Leave feedback</button>
       </div>
-      <img src="../../assets/images/leaf.png" alt="leaf" class="leaf-img" />
     </section>
     <footer class="footer">
-      <div class="footer__links">
-        <div class="footer__logo logo">
-          <p class="logo__title">PetStory online</p>
-          <img src="../../assets/icons/bamboo.svg" alt="bamboo" class="logo__icon" />
+      <div class="footer-info__wrapper">
+        <div class="footer__links">
+          <p class="logo__title footer-logo__title">PetStory <span class="logo__img">o</span>nline</p>
+          <button class="footer__btn btn">Donate for volunteers</button>
+          <ul class="links">
+            <li class="link">
+              <div class="icon__wrapper"><img src="../../assets/icons/facebook.svg" alt="facebook" class="icon__facebook" /></div>
+              <p class="link-text">Facebook</p>
+            </li>
+            <li class="link">
+              <div class="icon__wrapper"><img src="../../assets/icons/twitter.svg" alt="twitter" class="icon__twitter" /></div>
+              <p class="link-text">Twitter</p>
+            </li>
+            <li class="link">
+              <div class="icon__wrapper"><img src="../../assets/icons/instagram.svg" alt="instagram" class="icon__instagram" /></div>
+              <p class="link-text">Instagram</p>
+            </li>
+            <li class="link">
+              <div class="icon__wrapper"><img src="../../assets/icons/youtube.svg" alt="youtube" class="icon__youtube" /></div>
+              <p class="link-text">YouTube</p>
+            </li>
+          </ul>
         </div>
-        <button class="footer__btn btn">Donate for volunteers</button>
-        <ul class="links">
-          <li class="link">
-            <div class="icon__wrapper"><img src="../../assets/icons/facebook.svg" alt="facebook" class='icon__facebook'/></div>
-            <p class="link-text">Facebook</p>
-          </li>
-          <li class="link">
-            <div class="icon__wrapper"><img src="../../assets/icons/twitter.svg" alt="twitter" class='icon__twitter'/></div>
-            <p class="link-text">Twitter</p>
-          </li>
-          <li class="link">
-            <div class="icon__wrapper"><img src="../../assets/icons/instagram.svg" alt="instagram" class='icon__instagram'/></div>
-            <p class="link-text">Instagram</p>
-          </li>
-          <li class="link">
-            <div class="icon__wrapper"><img src="../../assets/icons/youtube.svg" alt="youtube" class='icon__youtube'/></div>
-            <p class="link-text">YouTube</p>
-          </li>
-        </ul>
-      </div>
-      <nav class="footer__menu menu">
-        <ul class="menu__list list">
-          <li class="menu__item item"><a href="#" class="item item_active">About</a></li>
-          <li class="menu__item item"><a href="#" class="item">Map</a></li>
-          <li class="menu__item item"><a href="#" class="item">Zoos</a></li>
-          <li class="menu__item item"><a href="#" class="item">Contact us</a></li>
-        </ul>
-      </nav>
-      <div class="footer__subscribe">
-        <div class="subscribe__wrapper">
-          <h4 class="subscribe__title">Subscribe to our news</h4>
-          <form action="" class="subscribe__form">
-            <input type="text" class="subscribe__input" placeholder="Enter your email" />
-            <input type="submit" class="subscribe__submit" />
-          </form>
+        <nav class="footer__menu menu">
+          <ul class="menu__list list">
+            <li class="menu__item item"><a href="#" class="item item_active">About</a></li>
+            <li class="menu__item item"><a href="#" class="item">Map</a></li>
+            <li class="menu__item item"><a href="#" class="item">Zoos</a></li>
+            <li class="menu__item item"><a href="#" class="item">Contact us</a></li>
+          </ul>
+        </nav>
+        <div class="footer__subscribe">
+          <div class="subscribe__wrapper">
+            <h4 class="subscribe__title">Subscribe to our news</h4>
+            <form action="" class="subscribe__form">
+              <input type="text" class="subscribe__input" placeholder="Enter your email" />
+              <input type="submit" class="subscribe__submit" />
+            </form>
+          </div>
+          <div class="footer__copyright">
+            <p class="copyright__author">Designed by Alisa Samborskaya</p>
+            <p class="copyright__year">©RSSchool & ©Yem Digital 2021</p>
+          </div>
         </div>
-        <div class="footer__copyright">
-          <p class="copyright__author">Designed by Alisa Samborskaya</p>
-          <p class="copyright__year">©RSSchool & ©Yem Digital 2021</p>
       </div>
     </footer>
   </body>

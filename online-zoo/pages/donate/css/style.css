@@ -14,6 +14,7 @@ body {
 a {
   color: white;
   text-decoration: none;
+  cursor: pointer;
 }
 
 /* FIRST SECTION */
@@ -80,9 +81,17 @@ a {
   align-self: center;
 }
 
+.item:active {
+  color: #f9804b;
+}
+
 .copyright {
   margin-left: auto;
   font-size: 16px;
+}
+
+.copyright__link:active {
+  color: #f9804b;
 }
 
 /*MAIN*/
@@ -223,19 +232,20 @@ a {
   width: 100%;
 }
 
-input[type='range'] {
+.form__range {
   -webkit-appearance: none;
   display: block;
   margin: 0;
   width: 100%;
   background: transparent;
+  cursor: pointer;
 }
 
-input[type='range']:focus {
+.form__range:focus {
   outline: none;
 }
 
-input[type='range']::-webkit-slider-runnable-track {
+.form__range::-webkit-slider-runnable-track {
   -webkit-appearance: none;
   z-index: -1;
   width: 100%;
@@ -246,7 +256,7 @@ input[type='range']::-webkit-slider-runnable-track {
   background: rgba(64, 73, 80, 1);
 }
 
-input[type='range']::-webkit-slider-thumb {
+.form__range::-webkit-slider-thumb {
   -webkit-appearance: none;
   cursor: pointer;
   height: 40px;
@@ -286,7 +296,7 @@ input[type='range']::-webkit-slider-thumb {
 
 .middle-line {
   position: absolute;
-  width: calc(100% - 25px);
+  width: calc(100% - 60px);
   border: none;
   color: #72828e;
   background-color: #72828e;
@@ -320,11 +330,30 @@ input[type='range']::-webkit-slider-thumb {
   padding: 13px 25px 15px 8px;
   border: 1px solid #929699;
   background-color: transparent;
-  color: #929699;
+  color: #333b41;
   margin-bottom: 25px;
   font-weight: 400;
   font-size: 16px;
   line-height: 140%;
+}
+
+.form__number:active {
+  border: 1px solid #4b9200;
+}
+
+.form__number:active::placeholder {
+  color: #4b9200;
+}
+.form__number:active:-ms-input-placeholder {
+  color: #4b9200;
+}
+.form__number:active::-ms-input-placeholder {
+  color: #4b9200;
+}
+
+.form__number:invalid {
+  color: #d31414;
+  border: 1px solid #d31414;
 }
 
 .form__number-currency:after {
@@ -336,6 +365,16 @@ input[type='range']::-webkit-slider-thumb {
   font-weight: 400;
   font-size: 20px;
   line-height: 140%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
 }
 
 .form__radio {
@@ -360,6 +399,7 @@ input[type='range']::-webkit-slider-thumb {
   color: #333b41;
   user-select: none;
 }
+
 .form__radio-text:before {
   content: '';
   display: inline-block;
@@ -388,6 +428,19 @@ input[type='range']::-webkit-slider-thumb {
   text-transform: uppercase;
   color: white;
   border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #e47209;
+}
+
+.btn:active {
+  background: #4b9200;
+}
+
+.btn:disabled {
+  background: #767474;
 }
 
 .form__submit {
@@ -422,6 +475,9 @@ input[type='range']::-webkit-slider-thumb {
 }
 
 .footer__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 5px;
   margin-bottom: 47px;
 }
@@ -434,6 +490,30 @@ input[type='range']::-webkit-slider-thumb {
 
 .link {
   display: flex;
+}
+
+.link:hover > .icon__wrapper {
+  background: #e47209;
+}
+
+.link:active > .icon__wrapper {
+  background: #4b9200;
+}
+
+.link:disabled > .icon__wrapper {
+  background: #767474;
+}
+
+.link:hover > .link-text {
+  color: #e47209;
+}
+
+.link:active > .link-text {
+  color: #4b9200;
+}
+
+.link:disabled > .link-text {
+  color: #767474;
 }
 
 .link-text {
@@ -500,14 +580,34 @@ input[type='range']::-webkit-slider-thumb {
   line-height: 140%;
 }
 
+.subscribe__input:active {
+  border: 1px solid #4b9200;
+}
+
+.subscribe__input:invalid {
+  border: 1px solid #d31414;
+}
+
 .subscribe__submit {
   width: 129px;
   height: 42px;
   font-weight: 400;
   font-size: 16px;
   line-height: 140%;
-  border: 1px solid;
+  color: #d31414;
+  border: 1px solid #d31414;
   border-radius: 5px;
+  cursor: pointer;
+}
+
+.subscribe__form:invalid .subscribe__submit {
+  color: #d31414;
+  border: 1px solid #d31414;
+}
+
+.subscribe__form:valid .subscribe__submit {
+  color: #4b9200;
+  border: 1px solid #4b9200;
 }
 
 .footer__copyright {
@@ -525,4 +625,10 @@ input[type='range']::-webkit-slider-thumb {
 
 .item_active {
   color: #f9804b;
+  pointer-events: none;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
 }

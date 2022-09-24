@@ -14,7 +14,9 @@
   <body>
     <div class="header__wrapper">
       <header class="header">
-        <h1 class="logo__title">PetStory <span class="logo__img">o</span>nline</h1>
+        <a href="../main"
+          ><h1 class="logo__title">PetStory <span class="logo__img">o</span>nline</h1></a
+        >
         <nav class="menu">
           <ul class="menu__list list">
             <li class="menu__item item"><a href="../main" class="item">About</a></li>
@@ -24,7 +26,11 @@
             <li class="menu__item item"><a href="#" class="item">Contact us</a></li>
           </ul>
         </nav>
-        <div class="copyright">Designed by ©</div>
+        <div class="copyright">
+          <a href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online?node-id=0%3A1" class="copyright__link"
+            >Designed by ©</a
+          >
+        </div>
       </header>
     </div>
     <section class="first-section"></section>
@@ -76,12 +82,12 @@
               <p class="form-price">$25</p>
             </div>
             <div class="form__number-currency">
-              <input type="number" class="form__number" placeholder="Another amount" />
+              <input type="number" class="form__number" placeholder="Another amount" max="9999" />
             </div>
             <div class="form__radio">
               <input type="radio" id="monthly" name="period" value="monthly" class="form__radio-btn" />
               <label for="monthly" class="form__radio-text">Monthly</label>
-              <input type="radio" id="once" name="period" value="once" class="form__radio-btn" />
+              <input type="radio" id="once" name="period" value="once" class="form__radio-btn" checked />
               <label for="once" class="form__radio-text">Once</label>
             </div>
             <input type="submit" class="form__submit btn" value="Feed a friend now" />
@@ -93,24 +99,36 @@
     <footer class="footer">
       <div class="footer-info__wrapper">
         <div class="footer__links">
-          <p class="logo__title footer-logo__title">PetStory <span class="logo__img">o</span>nline</p>
-          <button class="footer__btn btn">Donate for volunteers</button>
+          <a href="../main"
+            ><p class="logo__title footer-logo__title">PetStory <span class="logo__img">o</span>nline</p></a
+          >
+          <a href="../donate" class="footer__btn btn">
+            <span class="footer__btn-text">Donate for volunteers</span>
+          </a>
           <ul class="links">
             <li class="link">
-              <div class="icon__wrapper"><img src="../../assets/icons/facebook.svg" alt="facebook" class="icon__facebook" /></div>
-              <p class="link-text">Facebook</p>
+              <a href="https://www.facebook.com/" class="icon__wrapper">
+                <img src="../../assets/icons/facebook.svg" alt="facebook" class="icon__facebook" />
+              </a>
+              <a href="https://www.facebook.com/" class="link-text">Facebook</a>
             </li>
             <li class="link">
-              <div class="icon__wrapper"><img src="../../assets/icons/twitter.svg" alt="twitter" class="icon__twitter" /></div>
-              <p class="link-text">Twitter</p>
+              <a href="https://www.twitter.com/" class="icon__wrapper">
+                <img src="../../assets/icons/twitter.svg" alt="twitter" class="icon__twitter" />
+              </a>
+              <a href="https://www.twitter.com/" class="link-text">Twitter</a>
             </li>
             <li class="link">
-              <div class="icon__wrapper"><img src="../../assets/icons/instagram.svg" alt="instagram" class="icon__instagram" /></div>
-              <p class="link-text">Instagram</p>
+              <a href="https://www.instagram.com/" class="icon__wrapper">
+                <img src="../../assets/icons/instagram.svg" alt="instagram" class="icon__instagram" />
+              </a>
+              <a href="https://www.instagram.com/" class="link-text">Instagram</a>
             </li>
             <li class="link">
-              <div class="icon__wrapper"><img src="../../assets/icons/youtube.svg" alt="youtube" class="icon__youtube" /></div>
-              <p class="link-text">YouTube</p>
+              <a href="https://www.youtube.com/" class="icon__wrapper">
+                <img src="../../assets/icons/youtube.svg" alt="youtube" class="icon__youtube" />
+              </a>
+              <a href="https://www.youtube.com/" class="link-text">YouTube</a>
             </li>
           </ul>
         </div>
@@ -126,7 +144,7 @@
           <div class="subscribe__wrapper">
             <h4 class="subscribe__title">Subscribe to our news</h4>
             <form action="" class="subscribe__form">
-              <input type="text" class="subscribe__input" placeholder="Enter your email" />
+              <input type="email" class="subscribe__input" placeholder="Enter your email" required />
               <input type="submit" class="subscribe__submit" />
             </form>
           </div>

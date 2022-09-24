@@ -15,7 +15,9 @@
     <section class="first-section">
       <div class="header__wrapper">
         <header class="header">
-          <h1 class="logo__title">PetStory <span class="logo__img">o</span>nline</h1>
+          <a href="../main"
+            ><h1 class="logo__title">PetStory <span class="logo__img">o</span>nline</h1>
+          </a>
           <nav class="menu">
             <ul class="menu__list list">
               <li class="menu__item item"><a href="#" class="item item_active">About</a></li>
@@ -25,7 +27,11 @@
               <li class="menu__item item"><a href="#" class="item">Contact us</a></li>
             </ul>
           </nav>
-          <div class="copyright">Designed by ©</div>
+          <div class="copyright">
+            <a href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online?node-id=0%3A1" class="copyright__link"
+              >Designed by ©</a
+            >
+          </div>
         </header>
       </div>
       <div class="watch-favorite__wrapper">
@@ -54,6 +60,12 @@
     </section>
     <section class="third-section">
       <div class="slider">
+        <div class="slider__arrow-left__wrapper">
+          <img src="../../assets/icons/arrow-left.svg" alt="arrow-left" class="slider__arrow-left" />
+        </div>
+        <div class="slider__arrow-right__wrapper">
+          <img src="../../assets/icons/arrow-right.svg" alt="arrow-right" class="slider__arrow-right" />
+        </div>
         <div class="slide__wrapper">
           <div class="slide-img__wrapper">
             <img src="../../assets/images/slide-1.png" alt="Giant Pandas" class="slide-img" />
@@ -139,7 +151,7 @@
         </p>
         <p class="pick-and-feed__text">
           Even though the zoo has reopened, we need you now more than ever to help us deal with these problems. Please consider a gift to
-          our <span class="pick-and-feed__text_underline"> Emergency Support Fund</span> .
+          our <a href="../donate" class="pick-and-feed__text_underline"> Emergency Support Fund</a> .
         </p>
         <h4 class="pick-and-feed__subtitle">How it works</h4>
         <div class="pick-and-feed__steps">
@@ -164,7 +176,9 @@
             <p class="step__text">Your favourite animal gets delicious dish</p>
           </div>
         </div>
-        <button class="pick-and-feed__btn btn">Feed a friend now</button>
+        <a href="../donate" class="pick-and-feed__btn btn">
+          <span class="pick-and-feed__btn-text">Feed a friend now</span>
+        </a>
       </div>
     </section>
     <section class="fifth-section">
@@ -241,8 +255,8 @@
             </p>
           </div>
         </div>
-        <div class="testimonials__line">
-          <div class="testimonials__scroll"></div>
+        <div class="testimonials__range__wrapper">
+          <input type="range" min="1" max="5" value="1" class="testimonials__range" />
         </div>
         <button class="testimonials__btn btn">Leave feedback</button>
       </div>
@@ -250,24 +264,36 @@
     <footer class="footer">
       <div class="footer-info__wrapper">
         <div class="footer__links">
-          <p class="logo__title footer-logo__title">PetStory <span class="logo__img">o</span>nline</p>
-          <button class="footer__btn btn">Donate for volunteers</button>
+          <a href="../main">
+            <p class="logo__title footer-logo__title">PetStory <span class="logo__img">o</span>nline</p>
+          </a>
+          <a href="../donate" class="footer__btn btn">
+            <span class="footer__btn-text">Donate for volunteers</span>
+          </a>
           <ul class="links">
             <li class="link">
-              <div class="icon__wrapper"><img src="../../assets/icons/facebook.svg" alt="facebook" class="icon__facebook" /></div>
-              <p class="link-text">Facebook</p>
+              <a href="https://www.facebook.com/" class="icon__wrapper">
+                <img src="../../assets/icons/facebook.svg" alt="facebook" class="icon__facebook" />
+              </a>
+              <a href="https://www.facebook.com/" class="link-text">Facebook</a>
             </li>
             <li class="link">
-              <div class="icon__wrapper"><img src="../../assets/icons/twitter.svg" alt="twitter" class="icon__twitter" /></div>
-              <p class="link-text">Twitter</p>
+              <a href="https://www.twitter.com/" class="icon__wrapper">
+                <img src="../../assets/icons/twitter.svg" alt="twitter" class="icon__twitter" />
+              </a>
+              <a href="https://www.twitter.com/" class="link-text">Twitter</a>
             </li>
             <li class="link">
-              <div class="icon__wrapper"><img src="../../assets/icons/instagram.svg" alt="instagram" class="icon__instagram" /></div>
-              <p class="link-text">Instagram</p>
+              <a href="https://www.instagram.com/" class="icon__wrapper">
+                <img src="../../assets/icons/instagram.svg" alt="instagram" class="icon__instagram" />
+              </a>
+              <a href="https://www.instagram.com/" class="link-text">Instagram</a>
             </li>
             <li class="link">
-              <div class="icon__wrapper"><img src="../../assets/icons/youtube.svg" alt="youtube" class="icon__youtube" /></div>
-              <p class="link-text">YouTube</p>
+              <a href="https://www.youtube.com/" class="icon__wrapper">
+                <img src="../../assets/icons/youtube.svg" alt="youtube" class="icon__youtube" />
+              </a>
+              <a href="https://www.youtube.com/" class="link-text">YouTube</a>
             </li>
           </ul>
         </div>
@@ -283,7 +309,7 @@
           <div class="subscribe__wrapper">
             <h4 class="subscribe__title">Subscribe to our news</h4>
             <form action="" class="subscribe__form">
-              <input type="text" class="subscribe__input" placeholder="Enter your email" />
+              <input type="email" class="subscribe__input" placeholder="Enter your email" required />
               <input type="submit" class="subscribe__submit" />
             </form>
           </div>

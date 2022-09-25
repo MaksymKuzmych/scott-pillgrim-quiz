@@ -429,6 +429,7 @@ input[type='number'] {
   color: white;
   border: none;
   cursor: pointer;
+  outline: none;
 }
 
 .btn:hover {
@@ -445,6 +446,11 @@ input[type='number'] {
 
 .form__submit {
   margin: 0 0 28px 3px;
+}
+
+.donate__form:invalid .form__submit {
+  background: #767474;
+  pointer-events: none;
 }
 
 .donate__bottom-text {
@@ -603,6 +609,7 @@ input[type='number'] {
 .subscribe__form:invalid .subscribe__submit {
   color: #d31414;
   border: 1px solid #d31414;
+  pointer-events: none;
 }
 
 .subscribe__form:valid .subscribe__submit {

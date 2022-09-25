@@ -875,6 +875,7 @@ a {
 .subscribe__form:invalid .subscribe__submit {
   color: #d31414;
   border: 1px solid #d31414;
+  pointer-events: none;
 }
 
 .subscribe__form:valid .subscribe__submit {

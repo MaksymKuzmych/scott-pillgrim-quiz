@@ -146,6 +146,7 @@ a {
   color: white;
   border: none;
   cursor: pointer;
+  outline: none;
 }
 
 .btn:hover {
@@ -346,6 +347,26 @@ a {
 
 .slide__wrapper:hover .slide-img {
   transform: scale(1.03);
+}
+
+.slide-img__wrapper {
+  position: relative;
+}
+
+.slide-img__wrapper:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: transparent;
+  transition: all 0.5s;
+}
+
+.slide__wrapper:hover .slide-img__wrapper:after {
+  bottom: -2px;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .slide-info {

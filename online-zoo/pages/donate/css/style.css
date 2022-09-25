@@ -429,6 +429,7 @@ input[type='number'] {
   color: white;
   border: none;
   cursor: pointer;
+  outline: none;
 }
 
 .btn:hover {

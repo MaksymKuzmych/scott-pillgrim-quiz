@@ -277,6 +277,7 @@ a {
   left: 15px;
   transform: translate(0, -50%);
   background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
+  cursor: pointer;
 }
 
 .slider__arrow-left {
@@ -307,6 +308,7 @@ a {
   right: 15px;
   transform: translate(0, -50%);
   background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
+  cursor: pointer;
 }
 
 .slider__arrow-right {
@@ -332,6 +334,7 @@ a {
   border: 1px solid #fa6f32;
   border-radius: 5px;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .slide__wrapper:hover {
@@ -663,6 +666,7 @@ a {
   margin: 0;
   width: 100%;
   background: transparent;
+  cursor: pointer;
 }
 
 .testimonials__range:focus {

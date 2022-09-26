@@ -899,8 +899,8 @@ a {
   font-weight: 400;
   font-size: 16px;
   line-height: 140%;
-  color: #d31414;
-  border: 1px solid #d31414;
+  color: black;
+  border: 1px solid #333b41;
   border-radius: 5px;
   cursor: pointer;
 }
@@ -914,11 +914,6 @@ a {
   color: #d31414;
   border: 1px solid #d31414;
   pointer-events: none;
-}
-
-.subscribe__form:valid .subscribe__submit {
-  color: black;
-  border: 1px solid #333b41;
 }
 
 .footer__copyright {

@@ -634,6 +634,11 @@ input[type='number'] {
   cursor: pointer;
 }
 
+.subscribe__form:valid .subscribe__submit:active {
+  color: #4b9200;
+  border: 1px solid #4b9200;
+}
+
 .subscribe__form:invalid .subscribe__submit {
   color: #d31414;
   border: 1px solid #d31414;

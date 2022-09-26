@@ -905,6 +905,11 @@ a {
   cursor: pointer;
 }
 
+.subscribe__form:valid .subscribe__submit:active {
+  color: #4b9200;
+  border: 1px solid #4b9200;
+}
+
 .subscribe__form:invalid .subscribe__submit {
   color: #d31414;
   border: 1px solid #d31414;
@@ -912,8 +917,8 @@ a {
 }
 
 .subscribe__form:valid .subscribe__submit {
-  color: #4b9200;
-  border: 1px solid #4b9200;
+  color: black;
+  border: 1px solid #333b41;
 }
 
 .footer__copyright {

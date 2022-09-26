@@ -614,12 +614,12 @@ input[type='number'] {
   line-height: 140%;
 }
 
-.subscribe__input:active {
-  border: 1px solid #4b9200;
-}
-
 .subscribe__input:invalid {
   border: 1px solid #d31414;
+}
+
+.subscribe__form:invalid .subscribe__input:focus {
+  border: 1px solid #4b9200;
 }
 
 .subscribe__submit {

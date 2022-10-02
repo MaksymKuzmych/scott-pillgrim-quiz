@@ -91,6 +91,10 @@ a {
   color: #f9804b;
 }
 
+.burger-menu {
+  display: none;
+}
+
 .watch-favorite__wrapper {
   max-width: 1190px;
   margin: 0 auto;
@@ -160,6 +164,10 @@ a {
   background: #767474;
 }
 
+.watch-favorite__btn_tablet {
+  display: none;
+}
+
 /* SECOND SECTION */
 
 .second-section {
@@ -174,6 +182,10 @@ a {
   right: -1px;
   height: 608px;
   width: 205px;
+}
+
+.flower-img_tablet {
+  display: none;
 }
 
 .backstage {
@@ -410,6 +422,10 @@ a {
   line-height: 120%;
 }
 
+.slide-info__text_alligator-tablet {
+  display: none;
+}
+
 .slide-info__icon {
   height: 38px;
   margin-left: auto;
@@ -563,6 +579,7 @@ a {
 .fifth-section {
   padding: 140px 0 180px;
   position: relative;
+  overflow: hidden;
 }
 
 .fifth-section:after {
@@ -656,10 +673,6 @@ a {
   font-size: 15px;
   line-height: 120%;
   color: #767474;
-}
-
-.testimonial__text_small {
-  display: none;
 }
 
 .testimonials__range__wrapper {
@@ -792,6 +805,10 @@ a {
   max-width: 1190px;
   padding: 0 15px;
   justify-content: space-between;
+}
+
+.footer-info__wrapper_tablet {
+  display: none;
 }
 
 .footer-logo__title {
@@ -1148,17 +1165,12 @@ input:focus {
   }
 
   .pick-and-feed__text_underline {
-    display: inline-block;
-    border-bottom: 1px solid #fe9013;
     padding-bottom: 1px;
-    color: #333b41;
   }
 
   .pick-and-feed__steps {
-    display: flex;
     max-width: 765px;
     margin: 0 auto 70px;
-    justify-content: space-between;
   }
 
   .pick-and-feed__step {
@@ -1197,6 +1209,7 @@ input:focus {
     height: 390px;
     padding: 13px 15px 15px 15px;
   }
+
   .testimonial_1 {
     order: 1;
   }
@@ -1231,25 +1244,8 @@ input:focus {
     display: block;
   }
 
-  .testimonial__location {
-    font-weight: 300;
-    font-size: 15px;
-    line-height: 120%;
-    color: #bdbdbd;
-  }
-
   .testimonial__text {
-    display: none;
-  }
-
-  .testimonial__text_small {
-    display: block;
     height: 289px;
-    overflow: hidden;
-    font-weight: 300;
-    font-size: 15px;
-    line-height: 130%;
-    color: #767474;
   }
 
   .testimonials__range__wrapper {
@@ -1287,5 +1283,403 @@ input:focus {
   .subscribe__form {
     margin-left: -30px;
     margin-right: 30px;
+  }
+}
+
+@media (max-width: 945px) {
+  /* FIRST SECTION */
+
+  .header {
+    justify-content: space-between;
+    padding: 1px 3%;
+  }
+
+  .logo__title {
+    width: 47px;
+    border: none;
+    font-size: 12px;
+    margin: 0;
+  }
+
+  .logo__img:before {
+    content: url('../../../assets/icons/bamboo-tablet.svg');
+  }
+
+  .header__menu {
+    display: none;
+  }
+
+  .copyright {
+    display: none;
+  }
+
+  .burger-menu {
+    display: block;
+  }
+
+  .burger-menu__icon {
+    width: 19px;
+    height: 18px;
+  }
+
+  .watch-favorite__wrapper {
+    padding: 0 18px 40px;
+  }
+
+  .watch-favorite {
+    width: 255px;
+    margin: 48px 0 0 auto;
+  }
+
+  .watch-favorite__title {
+    margin: 0;
+    font-size: 54px;
+  }
+
+  .watch-favorite__title:before {
+    top: -37px;
+    left: -37px;
+    width: 237px;
+    height: 237px;
+  }
+
+  .watch-favorite__btn {
+    display: none;
+  }
+
+  .watch-favorite__btn_tablet {
+    display: block;
+    margin-top: -5px;
+  }
+
+  /* SECOND SECTION */
+
+  .second-section {
+    position: relative;
+  }
+
+  .backstage {
+    margin: -5px auto 25px;
+    padding: 0 0 0 3%;
+    display: flex;
+  }
+
+  .backstage-img__wrapper {
+    display: none;
+  }
+
+  .backstage__text {
+    flex: 0 1 495px;
+    justify-content: start;
+  }
+
+  .backstage__title {
+    margin: 65px 0 20px 5px;
+  }
+
+  .backstage-info__first {
+    margin-bottom: 30px;
+  }
+
+  .backstage__subtitle {
+    margin: 0 0 20px 5px;
+  }
+
+  .flower-img_tablet {
+    display: block;
+  }
+
+  /* THIRD SECTION */
+
+  .third-section {
+    padding-bottom: 100px;
+  }
+
+  .slider {
+    padding: 0 3%;
+    gap: 92px 5px;
+  }
+
+  .slider__arrow-left__wrapper {
+    top: 49.5%;
+    left: 38%;
+  }
+
+  .slider__arrow-right__wrapper {
+    top: 49.5%;
+    right: 38%;
+  }
+
+  .slide__wrapper {
+    width: calc(50% - 16px);
+    height: 52.2vw;
+  }
+
+  .slide__wrapper_1 {
+    order: 1;
+  }
+
+  .slide__wrapper_2 {
+    order: 2;
+  }
+
+  .slide__wrapper_3 {
+    order: 3;
+  }
+
+  .slide__wrapper_4 {
+    display: none;
+  }
+
+  .slide__wrapper_5 {
+    display: none;
+  }
+
+  .slide__wrapper_6 {
+    display: none;
+  }
+
+  .slide__wrapper_7 {
+    order: 4;
+  }
+
+  .slide-info {
+    width: 100%;
+    padding: 5px 11px 5px 10px;
+  }
+
+  .slide-text__wrapper {
+    bottom: 10px;
+  }
+
+  .slide__wrapper:hover .slide-text__wrapper {
+    bottom: 60px;
+  }
+
+  .slide-info__title {
+    line-height: 100%;
+    font-size: 13px;
+  }
+
+  .slide-info__text {
+    font-size: 11.5px;
+  }
+
+  .slide-info__text_alligator-desktop {
+    display: none;
+  }
+
+  .slide-info__text_alligator-tablet {
+    display: block;
+  }
+
+  .slide-info__icon {
+    height: 35px;
+    margin-left: auto;
+    padding-bottom: 5px;
+  }
+
+  .choose-favorite__btn {
+    margin: 60px auto 0;
+  }
+
+  .third-section:before {
+    content: url('../../../assets/images/palm-tablet.png');
+    width: 125px;
+  }
+
+  .third-section:after {
+    content: url('../../../assets/images/strelitzia-tablet.png');
+    width: 175px;
+  }
+
+  /* FOURTH SECTION */
+
+  .fourth-section {
+    padding: 3% 0;
+  }
+
+  .pick-and-feed {
+    padding: 8px 20px 60px;
+  }
+
+  .pick-and-feed__title {
+    margin-bottom: 20px;
+    font-size: 42px;
+  }
+
+  .pick-and-feed__main-text {
+    text-align: start;
+    margin: 0 0 20px 0;
+    font-size: 22px;
+  }
+
+  .pick-and-feed__text_bold {
+    text-align: start;
+    margin: 0 0 10px 0;
+    font-size: 16px;
+  }
+
+  .pick-and-feed__text {
+    margin: 0 0 30px 0;
+    font-size: 16px;
+  }
+
+  .pick-and-feed__text_underline {
+    padding-bottom: 1px;
+  }
+
+  .pick-and-feed__subtitle {
+    margin-bottom: 19px;
+  }
+
+  .pick-and-feed__steps {
+    margin: 0 auto 40px;
+  }
+
+  .pick-and-feed__step {
+    width: 28%;
+  }
+
+  .arrow-img {
+    display: none;
+  }
+
+  .pick-and-feed__step_2 {
+    position: relative;
+  }
+
+  .pick-and-feed__step_2:before {
+    content: url('../../../assets/icons/feed-arrow-tablet.svg');
+    position: absolute;
+    top: -17px;
+    left: -75px;
+  }
+
+  .pick-and-feed__step_2:after {
+    content: url('../../../assets/icons/feed-arrow-tablet.svg');
+    position: absolute;
+    top: -17px;
+    right: -58px;
+  }
+
+  .pick-and-feed__step_3 {
+    margin-right: 13px;
+  }
+
+  /*FIFTH SECTION*/
+
+  .fifth-section {
+    padding: 60px 0 80px;
+  }
+
+  .fifth-section:after {
+    content: url('../../../assets/images/leaf-tablet.png');
+    bottom: -72px;
+    right: -130px;
+    width: 247px;
+  }
+
+  .testimonials {
+    padding: 0 3%;
+  }
+
+  .testimonials__title {
+    margin-bottom: 32px;
+  }
+
+  .testimonials__content {
+    margin-bottom: 40px;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .testimonial {
+    width: 100%;
+    height: 109px;
+    padding: 12px 25px 8px 14px;
+  }
+
+  .testimonial__text {
+    height: 38px;
+  }
+
+  .testimonials__range__wrapper {
+    display: none;
+  }
+
+  .testimonials__btn {
+    align-self: center;
+    width: 240px;
+  }
+
+  /*FOOTER*/
+
+  .footer {
+    padding: 2% 0;
+  }
+
+  .footer-info__wrapper {
+    display: none;
+  }
+
+  .footer-info__wrapper_tablet {
+    margin: 0 auto;
+    display: flex;
+    padding: 0 10px;
+    justify-content: space-between;
+  }
+
+  .footer__links {
+    margin-left: 10px;
+  }
+
+  .footer-logo__title {
+    width: 82px;
+    padding: 2px 0;
+    position: relative;
+    text-align: center;
+    border: 1px solid #ffffff;
+    border-radius: 2px;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 120%;
+    margin-bottom: 32px;
+  }
+
+  .footer__btn {
+    margin-bottom: 99px;
+  }
+
+  .footer__menu {
+    align-self: start;
+    margin: 0;
+  }
+
+  .list {
+    gap: 37px;
+  }
+
+  .footer__social-net {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: space-between;
+  }
+
+  .links {
+    gap: 20px;
+  }
+
+  .footer__copyright {
+    margin-right: 10px;
+    margin-bottom: -5px;
+    font-weight: 100;
+    font-size: 16px;
+    line-height: 160%;
+  }
+
+  .copyright__author {
+    margin-bottom: 5px;
   }
 }

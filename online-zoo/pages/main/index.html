@@ -18,7 +18,7 @@
           <a href="../main"
             ><h1 class="logo__title">PetStory <span class="logo__img">o</span>nline</h1>
           </a>
-          <nav class="menu">
+          <nav class="menu header__menu">
             <ul class="menu__list list">
               <li class="menu__item item"><a href="#" class="item item_active">About</a></li>
               <li class="menu__item item"><a href="#" class="item">Map</a></li>
@@ -32,6 +32,9 @@
               >Designed by ©</a
             >
           </div>
+          <div class="burger-menu">
+            <img src="../../assets/icons/burger-menu.svg" alt="burger-menu" class="burger-menu__icon" />
+          </div>
         </header>
       </div>
       <div class="watch-favorite__wrapper">
@@ -39,12 +42,15 @@
           <h2 class="watch-favorite__title">Watch your <span class="watch-favorite__title_yellow">favorite</span> animal online</h2>
           <button class="watch-favorite__btn btn">Watch online</button>
         </div>
+        <button class="watch-favorite__btn watch-favorite__btn_tablet btn">Watch online</button>
       </div>
     </section>
     <section class="second-section">
       <div class="backstage">
+        <button class="watch-favorite__btn watch-favorite__btn_mobile btn">Watch online</button>
         <div class="backstage-img__wrapper">
           <img src="../../assets/images/bamboo-cap.png" alt="bamboo-cap" class="backstage-img" />
+          <img src="../../assets/images/bamboo-cap-small.png" alt="bamboo-cap" class="backstage-img_small" />
         </div>
         <div class="backstage__text">
           <h3 class="backstage__title">The Backstage of the Wilderness World.</h3>
@@ -56,6 +62,7 @@
             These have a total of more than 1,500 mammals and reptiles.
           </p>
         </div>
+        <img src="../../assets/images/flower-tablet.png" alt="flower" class="flower-img_tablet" />
       </div>
     </section>
     <section class="third-section">
@@ -66,7 +73,7 @@
         <div class="slider__arrow-right__wrapper">
           <img src="../../assets/icons/arrow-right.svg" alt="arrow-right" class="slider__arrow-right" />
         </div>
-        <div class="slide__wrapper">
+        <div class="slide__wrapper slide__wrapper_1">
           <div class="slide-img__wrapper">
             <img src="../../assets/images/slide-1.png" alt="Giant Pandas" class="slide-img" />
           </div>
@@ -78,7 +85,7 @@
             <img src="../../assets/icons/banana-bamboo_icon.svg" alt="banana" class="slide-info__icon icon_banana" />
           </div>
         </div>
-        <div class="slide__wrapper">
+        <div class="slide__wrapper slide__wrapper_2">
           <div class="slide-img__wrapper">
             <img src="../../assets/images/slide-2.png" alt="Eagles" class="slide-img" />
           </div>
@@ -90,7 +97,7 @@
             <img src="../../assets/icons/meat-fish_icon.svg" alt="meat-fish" class="slide-info__icon icon_meat" />
           </div>
         </div>
-        <div class="slide__wrapper">
+        <div class="slide__wrapper slide__wrapper_3">
           <div class="slide-img__wrapper">
             <img src="../../assets/images/slide-3.png" alt="Gorillas" class="slide-img" />
           </div>
@@ -102,7 +109,7 @@
             <img src="../../assets/icons/banana-bamboo_icon.svg" alt="banana" class="slide-info__icon icon_banana" />
           </div>
         </div>
-        <div class="slide__wrapper">
+        <div class="slide__wrapper slide__wrapper_4">
           <div class="slide-img__wrapper">
             <img src="../../assets/images/slide-4.png" alt="Two-toed Sloth" class="slide-img" />
           </div>
@@ -114,7 +121,7 @@
             <img src="../../assets/icons/banana-bamboo_icon.svg" alt="banana" class="slide-info__icon icon_banana" />
           </div>
         </div>
-        <div class="slide__wrapper">
+        <div class="slide__wrapper slide__wrapper_5">
           <div class="slide-img__wrapper">
             <img src="../../assets/images/slide-5.png" alt="Cheetahs" class="slide-img" />
           </div>
@@ -126,7 +133,7 @@
             <img src="../../assets/icons/meat-fish_icon.svg" alt="meat-fish" class="slide-info__icon icon_meat" />
           </div>
         </div>
-        <div class="slide__wrapper">
+        <div class="slide__wrapper slide__wrapper_6">
           <div class="slide-img__wrapper">
             <img src="../../assets/images/slide-6.png" alt="Penguins" class="slide-img" />
           </div>
@@ -134,6 +141,19 @@
             <div class="slide-text__wrapper">
               <h5 class="slide-info__title">Penguins</h5>
               <p class="slide-info__text">Native to Antarctica</p>
+            </div>
+            <img src="../../assets/icons/meat-fish_icon.svg" alt="meat-fish" class="slide-info__icon icon_meat" />
+          </div>
+        </div>
+        <div class="slide__wrapper slide__wrapper_7">
+          <div class="slide-img__wrapper">
+            <img src="../../assets/images/slide-7.png" alt="Alligator" class="slide-img" />
+          </div>
+          <div class="slide-info">
+            <div class="slide-text__wrapper">
+              <h5 class="slide-info__title">Alligators</h5>
+              <p class="slide-info__text slide-info__text_alligator-desktop">Native to Southeastern U. S.</p>
+              <p class="slide-info__text slide-info__text_alligator-tablet">Native to Southeastern United States</p>
             </div>
             <img src="../../assets/icons/meat-fish_icon.svg" alt="meat-fish" class="slide-info__icon icon_meat" />
           </div>
@@ -162,14 +182,14 @@
             <p class="step__text">Pay with card</p>
           </div>
           <img src="../../assets/icons/feed-arrow.svg" alt="arrow" class="arrow-img arrow-img__first" />
-          <div class="pick-and-feed__step">
+          <div class="pick-and-feed__step pick-and-feed__step_2">
             <div class="step-img__wrapper">
               <img src="../../assets/icons/zoo.svg" alt="zoo" class="step-img step-img_zoo" />
             </div>
             <p class="step__text">Payment goes to the zoo</p>
           </div>
           <img src="../../assets/icons/feed-arrow.svg" alt="arrow" class="arrow-img arrow-img__second" />
-          <div class="pick-and-feed__step">
+          <div class="pick-and-feed__step pick-and-feed__step_3">
             <div class="step-img__wrapper">
               <img src="../../assets/icons/monkey.svg" alt="monkey" class="step-img step-img_monkey" />
             </div>
@@ -185,7 +205,7 @@
       <div class="testimonials">
         <h3 class="testimonials__title">Testimonials</h3>
         <div class="testimonials__content">
-          <div class="testimonial">
+          <div class="testimonial testimonial_1">
             <div class="testimonial__header">
               <img src="../../assets/icons/user_icon.svg" alt="user" class="testimonial__img" />
               <div class="testimonial__info">
@@ -201,7 +221,7 @@
               watch gouillas. Online zoo is one jf the ways to instill a love for animals.
             </p>
           </div>
-          <div class="testimonial">
+          <div class="testimonial testimonial_2">
             <div class="testimonial__header">
               <img src="../../assets/images/man.png" alt="user" class="testimonial__img" />
               <div class="testimonial__info">
@@ -219,7 +239,7 @@
               My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.
             </p>
           </div>
-          <div class="testimonial">
+          <div class="testimonial testimonial_3">
             <div class="testimonial__header">
               <img src="../../assets/images/woman-1.png" alt="user" class="testimonial__img" />
               <div class="testimonial__info">
@@ -236,11 +256,12 @@
               zoo I’ve met.My son delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love for animals.
             </p>
           </div>
-          <div class="testimonial">
+          <div class="testimonial testimonial_4">
             <div class="testimonial__header">
               <img src="../../assets/images/woman-2.png" alt="user" class="testimonial__img" />
               <div class="testimonial__info">
-                <h5 class="testimonial__name">Mila Riksha</h5>
+                <h5 class="testimonial__name testimonial__name_4">Mila Riksha</h5>
+                <h5 class="testimonial__name testimonial__name_4-small">Oska Samborska</h5>
                 <p class="testimonial__location">Local Austria &nbsp•&nbsp Yesterday</p>
               </div>
             </div>
@@ -318,6 +339,94 @@
             <p class="copyright__year">©RSSchool & ©Yem Digital 2021</p>
           </div>
         </div>
+      </div>
+      <div class="footer-info__wrapper_tablet">
+        <div class="footer__links">
+          <a href="../main">
+            <p class="logo__title footer-logo__title">PetStory <span class="logo__img">o</span>nline</p>
+          </a>
+          <a href="../donate" class="footer__btn btn">
+            <span class="footer__btn-text">Donate for volunteers</span>
+          </a>
+          <nav class="footer__menu menu">
+            <ul class="menu__list_footer list">
+              <li class="menu__item item"><a href="#" class="item item_active">About</a></li>
+              <li class="menu__item item"><a href="#" class="item">Map</a></li>
+              <li class="menu__item item"><a href="#" class="item">Zoos</a></li>
+              <li class="menu__item item"><a href="#" class="item">Contact us</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="footer__social-net">
+          <ul class="links">
+            <li class="link">
+              <a href="https://www.facebook.com/" class="icon__wrapper">
+                <img src="../../assets/icons/facebook.svg" alt="facebook" class="icon__facebook" />
+              </a>
+            </li>
+            <li class="link">
+              <a href="https://www.twitter.com/" class="icon__wrapper">
+                <img src="../../assets/icons/twitter.svg" alt="twitter" class="icon__twitter" />
+              </a>
+            </li>
+            <li class="link">
+              <a href="https://www.instagram.com/" class="icon__wrapper">
+                <img src="../../assets/icons/instagram.svg" alt="instagram" class="icon__instagram" />
+              </a>
+            </li>
+            <li class="link">
+              <a href="https://www.youtube.com/" class="icon__wrapper">
+                <img src="../../assets/icons/youtube.svg" alt="youtube" class="icon__youtube" />
+              </a>
+            </li>
+          </ul>
+          <div class="footer__copyright">
+            <p class="copyright__author">Designed by Alisa Samborskaya</p>
+            <p class="copyright__year">©RSSchool & ©Yem Digital 2021</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-info__wrapper_mobile">
+        <a href="../main">
+          <p class="logo__title footer-logo__title">PetStory <span class="logo__img logo__img_footer">o</span>nline</p>
+        </a>
+        <ul class="links">
+          <li class="link">
+            <a href="https://www.facebook.com/" class="icon__wrapper">
+              <img src="../../assets/icons/facebook.svg" alt="facebook" class="icon__facebook" />
+            </a>
+          </li>
+          <li class="link">
+            <a href="https://www.twitter.com/" class="icon__wrapper">
+              <img src="../../assets/icons/twitter.svg" alt="twitter" class="icon__twitter" />
+            </a>
+          </li>
+          <li class="link">
+            <a href="https://www.instagram.com/" class="icon__wrapper">
+              <img src="../../assets/icons/instagram.svg" alt="instagram" class="icon__instagram" />
+            </a>
+          </li>
+          <li class="link">
+            <a href="https://www.youtube.com/" class="icon__wrapper">
+              <img src="../../assets/icons/youtube.svg" alt="youtube" class="icon__youtube" />
+            </a>
+          </li>
+        </ul>
+        <a href="../donate" class="footer__btn btn">
+          <span class="footer__btn-text">Donate for volunteers</span>
+        </a>
+        <div class="footer__copyright">
+          <p class="copyright__author">Designed by Alisa Samborskaya</p>
+          <p class="copyright__year">©RSSchool & ©Yem Digital 2021</p>
+        </div>
+        <nav class="footer__menu menu">
+          <ul class="menu__list_footer list">
+            <li class="menu__item item"><a href="#" class="item item_active">About</a></li>
+            <li class="menu__item item"><a href="#" class="item">Map</a></li>
+            <li class="menu__item item"><a href="#" class="item">Zoos</a></li>
+            <li class="menu__item item"><a href="#" class="item">Contact us</a></li>
+          </ul>
+        </nav>
       </div>
     </footer>
   </body>

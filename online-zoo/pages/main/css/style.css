@@ -1969,7 +1969,8 @@ input:focus {
   }
 
   .footer-logo__title {
-    width: 128px;
+    width: 200px;
+    text-align: center;
     padding: 0;
     border: none;
     margin-bottom: 28px;

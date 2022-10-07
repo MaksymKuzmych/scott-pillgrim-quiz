@@ -4,9 +4,13 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
+  display: flex;
+  position: relative;
+  flex-direction: column;
   font-family: 'Roboto', sans-serif;
   font-style: normal;
 }
@@ -14,6 +18,14 @@ body {
 a {
   color: white;
   text-decoration: none;
+}
+
+.blackout {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 2;
 }
 
 /* FIRST SECTION */
@@ -91,7 +103,11 @@ a {
   color: #f9804b;
 }
 
-.burger-menu {
+.burger-img {
+  display: none;
+}
+
+.burger-popup {
   display: none;
 }
 
@@ -971,18 +987,6 @@ a {
   margin-bottom: 5px;
 }
 
-/*GENERAL*/
-
-.item_active {
-  color: #f9804b;
-  pointer-events: none;
-}
-
-textarea:focus,
-input:focus {
-  outline: none;
-}
-
 /*MEDIA*/
 
 @media (max-width: 1580px) {
@@ -1308,6 +1312,7 @@ input:focus {
   .header {
     justify-content: space-between;
     padding: 1px 3%;
+    position: relative;
   }
 
   .logo__title {
@@ -1329,13 +1334,63 @@ input:focus {
     display: none;
   }
 
-  .burger-menu {
+  .burger-img {
     display: block;
+    cursor: pointer;
   }
 
   .burger-menu__icon {
     width: 19px;
     height: 18px;
+  }
+
+  .burger-popup {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: -350px;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    z-index: 4;
+    padding: 10px;
+    transition: transform 0.5s;
+  }
+
+  .cross_burger {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+
+  .burger-logo__title {
+    color: rgba(254, 144, 19, 1);
+    border: 1px solid rgba(254, 144, 19, 1);
+    font-size: 15px;
+    width: 66px;
+    margin-bottom: 30px;
+    cursor: default;
+  }
+
+  .logo__img_burger:before {
+    content: url('../../../assets/icons/bamboo-orange.svg');
+  }
+
+  .burger-menu__list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+    list-style-type: none;
+  }
+
+  .burger-menu__link {
+    color: #333b41;
+  }
+
+  .burger-menu__link:active {
+    color: #f9804b;
   }
 
   .watch-favorite__wrapper {
@@ -2017,4 +2072,24 @@ input:focus {
   .copyright__author {
     margin-bottom: 5px;
   }
+}
+
+/*GENERAL*/
+
+.item_active {
+  color: #f9804b;
+  pointer-events: none;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+.hide {
+  display: none;
+}
+
+.burger-show {
+  transform: translateY(350px);
 }

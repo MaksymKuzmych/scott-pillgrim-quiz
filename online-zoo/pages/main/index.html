@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <script defer src="js/burger.js"></script>
     <title>Main</title>
   </head>
   <body>
@@ -32,8 +33,26 @@
               >Designed by ©</a
             >
           </div>
-          <div class="burger-menu">
+          <div class="burger-img">
             <img src="../../assets/icons/burger-menu.svg" alt="burger-menu" class="burger-menu__icon" />
+          </div>
+          <div class="burger-popup">
+            <img src="../../assets/icons/cross.svg" alt="cross" class="cross cross_burger" />
+            <p class="logo__title burger-logo__title">PetStory <span class="logo__img logo__img_burger">o</span>nline</p>
+            <nav class="burger-menu">
+              <ul class="burger-menu__list">
+                <li class="burger-menu__item"><a href="#" class="burger-menu__link item_active">About</a></li>
+                <li class="burger-menu__item"><a href="#" class="burger-menu__link">Map</a></li>
+                <li class="burger-menu__item"><a href="#" class="burger-menu__link">Zoos</a></li>
+                <li class="burger-menu__item"><a href="../donate" class="burger-menu__link">Donate</a></li>
+                <li class="burger-menu__item"><a href="#" class="burger-menu__link">Contact us</a></li>
+                <li class="burger-menu__item">
+                  <a href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online?node-id=0%3A1" class="burger-menu__link">
+                    Designed by ©
+                  </a>
+                </li>
+              </ul>
+            </nav>
           </div>
         </header>
       </div>
@@ -429,5 +448,6 @@
         </nav>
       </div>
     </footer>
+    <div class="blackout hide"></div>
   </body>
 </html>

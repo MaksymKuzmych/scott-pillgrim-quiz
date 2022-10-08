@@ -692,7 +692,7 @@ input[type='number'] {
 
 /*MEDIA*/
 
-@media (max-width: 1350px) {
+@media (max-width: 1320px) {
   /* FIRST SECTION */
 
   .first-section {
@@ -920,7 +920,7 @@ input[type='number'] {
   }
 }
 
-@media (max-width: 945px) {
+@media (max-width: 965px) {
   /* FIRST SECTION */
 
   .header__wrapper {

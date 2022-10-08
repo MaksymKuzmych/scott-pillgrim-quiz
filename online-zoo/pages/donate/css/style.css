@@ -111,6 +111,10 @@ a {
   display: none;
 }
 
+.burger-popup {
+  display: none;
+}
+
 /*MAIN*/
 
 .main {

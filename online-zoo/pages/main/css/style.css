@@ -2126,7 +2126,7 @@ input:focus {
   left: 50vw;
   transform: translate(-50%, -50%);
   padding: 20px 36px 17px 17px;
-  background: transparent;
+  background: #f5f7f6;
   z-index: 4;
 }
 

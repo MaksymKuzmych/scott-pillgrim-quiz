@@ -9,6 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <script defer src="js/burger.js"></script>
+    <script defer src="js/amount.js"></script>
     <title>Donate</title>
   </head>
   <body>
@@ -31,8 +33,26 @@
             >Designed by ©</a
           >
         </div>
-        <div class="burger-menu">
+        <div class="burger-img">
           <img src="../../assets/icons/burger-menu.svg" alt="burger-menu" class="burger-menu__icon" />
+        </div>
+        <div class="burger-popup">
+          <img src="../../assets/icons/cross.svg" alt="cross" class="cross cross_burger" />
+          <p class="logo__title burger-logo__title">PetStory <span class="logo__img logo__img_burger">o</span>nline</p>
+          <nav class="burger-menu">
+            <ul class="burger-menu__list">
+              <li class="burger-menu__item"><a href="../main" class="burger-menu__link">About</a></li>
+              <li class="burger-menu__item"><a href="#" class="burger-menu__link">Map</a></li>
+              <li class="burger-menu__item"><a href="#" class="burger-menu__link">Zoos</a></li>
+              <li class="burger-menu__item"><a href="#" class="burger-menu__link item_active">Donate</a></li>
+              <li class="burger-menu__item"><a href="#" class="burger-menu__link">Contact us</a></li>
+              <li class="burger-menu__item">
+                <a href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online?node-id=0%3A1" class="burger-menu__link">
+                  Designed by ©
+                </a>
+              </li>
+            </ul>
+          </nav>
         </div>
       </header>
     </div>
@@ -61,16 +81,16 @@
           <h4 class="donate__form-title">Amount</h4>
           <form action="#" class="donate__form">
             <div class="form-range__container">
-              <input type="range" min="1" max="8" value="3" class="form__range" />
-              <input type="range" min="1" max="7" value="2" class="form__range_small" />
-              <input type="range" min="1" max="5" value="3" class="form__range_tablet" />
+              <input type="range" min="1" max="8" value="6" class="form__range" />
+              <input type="range" min="2" max="8" value="6" class="form__range_small" />
+              <input type="range" min="4" max="8" value="6" class="form__range_tablet" />
               <div class="ticks">
                 <span class="tick tick_1"></span>
                 <span class="tick tick_2"></span>
                 <span class="tick tick_3"></span>
                 <span class="tick tick_4"></span>
                 <span class="tick tick_5"></span>
-                <span class="tick tick_6"></span>
+                <span class="tick tick_6 tick_active"></span>
                 <span class="tick tick_7"></span>
                 <span class="tick tick_8"></span>
                 <hr class="middle-line" />
@@ -79,15 +99,15 @@
             <div class="form-price__wrapper">
               <p class="form-price form-price_1">$5000</p>
               <p class="form-price form-price_2">$2000</p>
-              <p class="form-price form-price_3 item_active">$1000</p>
+              <p class="form-price form-price_3">$1000</p>
               <p class="form-price form-price_4">$500</p>
               <p class="form-price form-price_5">$250</p>
-              <p class="form-price form-price_6 item_active_tablet">$100</p>
+              <p class="form-price form-price_6 item_active">$100</p>
               <p class="form-price form-price_7">$50</p>
               <p class="form-price form-price_8">$25</p>
             </div>
             <div class="form__number-currency">
-              <input type="number" class="form__number" placeholder="Another amount" max="9999" />
+              <input type="number" class="form__number" placeholder="Another amount" max="9999" value="100" />
             </div>
             <div class="form__radio">
               <input type="radio" id="monthly" name="period" value="monthly" class="form__radio-btn" />
@@ -107,7 +127,7 @@
           <a href="../main"
             ><p class="logo__title footer-logo__title">PetStory <span class="logo__img">o</span>nline</p></a
           >
-          <a href="../donate" class="footer__btn btn">
+          <a href="#" class="footer__btn btn">
             <span class="footer__btn-text">Donate for volunteers</span>
           </a>
           <ul class="links">
@@ -164,7 +184,7 @@
           <a href="../main">
             <p class="logo__title footer-logo__title">PetStory <span class="logo__img">o</span>nline</p>
           </a>
-          <a href="../donate" class="footer__btn btn">
+          <a href="#" class="footer__btn btn">
             <span class="footer__btn-text">Donate for volunteers</span>
           </a>
           <nav class="footer__menu menu">
@@ -231,7 +251,7 @@
             </a>
           </li>
         </ul>
-        <a href="../donate" class="footer__btn btn">
+        <a href="#" class="footer__btn btn">
           <span class="footer__btn-text">Donate for volunteers</span>
         </a>
         <div class="footer__copyright">
@@ -248,5 +268,6 @@
         </nav>
       </div>
     </footer>
+    <div class="blackout hide"></div>
   </body>
 </html>

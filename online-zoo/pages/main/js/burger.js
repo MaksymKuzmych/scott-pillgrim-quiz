@@ -1,7 +1,7 @@
-let burgerIcon = document.querySelector('.burger-menu__icon')
-let burgerPopUp = document.querySelector('.burger-popup')
-let burgerCross = document.querySelector('.cross_burger')
-let blackout = document.querySelector('.blackout')
+const burgerIcon = document.querySelector('.burger-menu__icon')
+const burgerPopUp = document.querySelector('.burger-popup')
+const burgerCross = document.querySelector('.cross_burger')
+const blackout = document.querySelector('.blackout')
 
 function hideBurger() {
   burgerPopUp.classList.remove('burger-show')

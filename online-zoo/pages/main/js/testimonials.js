@@ -1,10 +1,10 @@
-let testimonialsContent = document.querySelector('.testimonials__content')
-let testimonialsRange = document.querySelector('.testimonials__range')
-let testimonialsPopup = document.querySelector('.testimonial-popup')
-let testimonialsPopupContent = document.querySelector('.testimonial-popup__content')
-let testimonials = document.querySelectorAll('.testimonial')
-let testimonialsCross = document.querySelector('.cross_popup')
-let header = document.querySelector('.header__wrapper')
+const testimonialsContent = document.querySelector('.testimonials__content')
+const testimonialsRange = document.querySelector('.testimonials__range')
+const testimonialsPopup = document.querySelector('.testimonial-popup')
+const testimonialsPopupContent = document.querySelector('.testimonial-popup__content')
+const testimonials = document.querySelectorAll('.testimonial')
+const testimonialsCross = document.querySelector('.cross_popup')
+const header = document.querySelector('.header__wrapper')
 
 testimonialsRange.addEventListener('input', () => {
   if (+window.innerWidth > 1320) {

@@ -7,6 +7,10 @@
   -webkit-tap-highlight-color: transparent;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   display: flex;
   position: relative;
@@ -1218,10 +1222,6 @@ input[type='number'] {
     top: 8px;
   }
 
-  .item_active_tablet {
-    color: #f9804b;
-  }
-
   /*FOOTER*/
 
   .footer {
@@ -1548,4 +1548,8 @@ input:focus {
 
 .burger-show {
   transform: translateY(350px);
+}
+
+.tick_active {
+  background: #4b9200;
 }

@@ -199,7 +199,7 @@ a {
   display: block;
   content: url('../../../assets/images/flower.png');
   position: absolute;
-  top: -128px;
+  top: 10px;
   right: -1px;
   height: 608px;
   width: 205px;
@@ -296,12 +296,25 @@ a {
 
 .slider {
   max-width: 1354px;
-  padding: 0 97px;
+  padding: 0;
+  margin: 0 auto;
+  position: relative;
   display: flex;
+  justify-content: center;
+}
+
+.slider__content {
+  width: 1160px;
+  overflow: hidden;
+}
+
+.slider__content_wrapper {
+  display: flex;
+  width: 100%;
   flex-wrap: wrap;
   justify-content: space-between;
   position: relative;
-  margin: 0 auto;
+  transition: transform 0.15s;
   gap: 20px 5px;
 }
 
@@ -318,6 +331,7 @@ a {
   transform: translate(0, -50%);
   background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
   cursor: pointer;
+  z-index: 2;
 }
 
 .slider__arrow-left {
@@ -349,6 +363,7 @@ a {
   transform: translate(0, -50%);
   background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
   cursor: pointer;
+  z-index: 2;
 }
 
 .slider__arrow-right {
@@ -381,7 +396,7 @@ a {
   background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
 }
 
-.slide__wrapper_7 {
+.slide__wrapper:nth-child(7) {
   display: none;
 }
 
@@ -1101,7 +1116,15 @@ a {
   }
 
   .slider {
-    padding: 0 3%;
+    padding: 0 0.5%;
+  }
+
+  .slider__content {
+    width: 940px;
+    margin: 0 auto;
+  }
+
+  .slider__content_wrapper {
     gap: 92px 5px;
   }
 
@@ -1114,37 +1137,8 @@ a {
   }
 
   .slide__wrapper {
-    width: calc(33% - 16px);
-    height: 35.4vw;
-  }
-
-  .slide__wrapper_1 {
-    order: 1;
-  }
-
-  .slide__wrapper_2 {
-    order: 2;
-  }
-
-  .slide__wrapper_3 {
-    order: 4;
-  }
-
-  .slide__wrapper_4 {
-    display: none;
-  }
-
-  .slide__wrapper_5 {
-    order: 3;
-  }
-
-  .slide__wrapper_6 {
-    order: 6;
-  }
-
-  .slide__wrapper_7 {
-    display: block;
-    order: 5;
+    width: 295px;
+    height: 354px;
   }
 
   .slide-info {
@@ -1461,11 +1455,6 @@ a {
     padding-bottom: 100px;
   }
 
-  .slider {
-    padding: 0 3%;
-    gap: 92px 5px;
-  }
-
   .slider__arrow-left__wrapper {
     top: 49.5%;
     left: 38%;
@@ -1476,37 +1465,25 @@ a {
     right: 38%;
   }
 
+  .slider__content {
+    width: 600px;
+  }
+
   .slide__wrapper {
-    width: calc(50% - 16px);
-    height: 52.2vw;
+    width: 285px;
+    height: 332px;
   }
 
-  .slide__wrapper_1 {
-    order: 1;
-  }
-
-  .slide__wrapper_2 {
-    order: 2;
-  }
-
-  .slide__wrapper_3 {
-    order: 3;
-  }
-
-  .slide__wrapper_4 {
+  .slide__wrapper:nth-child(5) {
     display: none;
   }
 
-  .slide__wrapper_5 {
+  .slide__wrapper:nth-child(6) {
     display: none;
   }
 
-  .slide__wrapper_6 {
+  .slide__wrapper:nth-child(7) {
     display: none;
-  }
-
-  .slide__wrapper_7 {
-    order: 4;
   }
 
   .slide-info {
@@ -1822,7 +1799,7 @@ a {
     display: block;
     content: url('../../../assets/images/flower-mobile.png');
     position: absolute;
-    top: 20px;
+    top: 38px;
     right: 5px;
     height: 217px;
     width: 30px;
@@ -1876,6 +1853,13 @@ a {
 
   .slider {
     padding: 0 3%;
+  }
+
+  .slider__content {
+    width: 100%;
+  }
+
+  .slider__content_wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -2122,6 +2106,11 @@ input:focus {
   transform: translateY(-40px);
 }
 
+.arrow_disabled {
+  background: #767474;
+  pointer-events: none;
+}
+
 /*TESTIMONIALS POPUP*/
 
 .testimonial-popup {
@@ -2130,7 +2119,7 @@ input:focus {
   left: 50vw;
   transform: translate(-50%, -50%);
   padding: 20px 36px 17px 17px;
-  background: #f5f7f6;
+  background: rgba(241, 243, 242, 0.3);
   z-index: 4;
 }
 

@@ -288,6 +288,7 @@ a {
   border-radius: 2px;
   border: none;
   padding: 4px 14px 4px 10px;
+  height: 25px;
   background: rgba(64, 73, 80, 1);
 }
 
@@ -306,6 +307,10 @@ a {
   background-position: center;
   background-repeat: no-repeat;
   margin: -11px 0;
+}
+
+.hide-thumb::-webkit-slider-thumb {
+  visibility: hidden;
 }
 
 .form__range::-moz-range-track {

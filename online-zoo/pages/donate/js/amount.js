@@ -19,17 +19,46 @@ function changePrice(range) {
   amount.value = currentPrice.textContent.slice(1)
 }
 
+function hideThumb() {
+  rangeDesktop.classList.add('hide-thumb')
+  rangeSmall.classList.add('hide-thumb')
+  rangeTablet.classList.add('hide-thumb')
+}
+
+function showThumb() {
+  rangeDesktop.classList.remove('hide-thumb')
+  rangeSmall.classList.remove('hide-thumb')
+  rangeTablet.classList.remove('hide-thumb')
+}
+
+rangeDesktop.addEventListener('click', () => {
+  changePrice(rangeDesktop)
+  showThumb()
+})
+rangeSmall.addEventListener('click', () => {
+  changePrice(rangeSmall)
+  showThumb()
+})
+rangeTablet.addEventListener('click', () => {
+  changePrice(rangeTablet)
+  showThumb()
+})
+
 rangeDesktop.addEventListener('input', () => {
   changePrice(rangeDesktop)
+  showThumb()
 })
 rangeSmall.addEventListener('input', () => {
   changePrice(rangeSmall)
+  showThumb()
 })
 rangeTablet.addEventListener('input', () => {
   changePrice(rangeTablet)
+  showThumb()
 })
 
 window.addEventListener('resize', () => {
+  showThumb()
   if (+window.innerWidth > 1320) {
     rangeDesktop.value = 6
     changePrice(rangeDesktop)
@@ -43,6 +72,7 @@ window.addEventListener('resize', () => {
 })
 
 amount.addEventListener('input', () => {
+  showThumb()
   if (+amount.value === 5000) {
     rangeDesktop.value = 1
     changePrice(rangeDesktop)
@@ -98,5 +128,6 @@ amount.addEventListener('input', () => {
     price.forEach((el) => {
       el.classList.remove('item_active')
     })
+    hideThumb()
   }
 })

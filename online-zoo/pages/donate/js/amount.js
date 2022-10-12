@@ -130,4 +130,10 @@ amount.addEventListener('input', () => {
     })
     hideThumb()
   }
+  if (+window.innerWidth <= 1320 && +amount.value === 5000) {
+    hideThumb()
+  }
+  if ((+window.innerWidth <= 965 && +amount.value === 5000) || +amount.value === 2000 || +amount.value === 1000) {
+    hideThumb()
+  }
 })

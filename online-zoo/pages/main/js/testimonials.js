@@ -24,11 +24,9 @@ function showTestimonial() {
 }
 
 function hideTestimonial() {
-  if (+window.innerWidth <= 965) {
-    testimonialsPopup.classList.add('hide')
-    blackout.classList.add('hide')
-    header.classList.remove('header-hide')
-  }
+  testimonialsPopup.classList.add('hide')
+  blackout.classList.add('hide')
+  header.classList.remove('header-hide')
 }
 
 testimonials.forEach((el, idx) => {
@@ -42,3 +40,17 @@ testimonials.forEach((el, idx) => {
 
 blackout.addEventListener('click', hideTestimonial)
 testimonialsCross.addEventListener('click', hideTestimonial)
+
+window.addEventListener('resize', () => {
+  if (+window.innerWidth > 1320) {
+    hideTestimonial()
+    testimonialsContent.style.transform = `translateX(-${testimonialsRange.value * 296}px)`
+  }
+  if (+window.innerWidth <= 1320 && +window.innerWidth > 965) {
+    hideTestimonial()
+    testimonialsContent.style.transform = `translateX(-${testimonialsRange.value * 323}px)`
+  }
+  if (+window.innerWidth <= 965) {
+    testimonialsContent.style.transform = `translateX(0px)`
+  }
+})

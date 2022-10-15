@@ -32,22 +32,22 @@ function changeSlide(width, arrow) {
   }, 600)
 }
 
-rightArrow.addEventListener('click', () => {
+leftArrow.addEventListener('click', () => {
   if (+window.innerWidth > 1320) {
-    changeSlide(1160, rightArrow)
+    changeSlide(1160, leftArrow)
   } else if (+window.innerWidth > 965) {
-    changeSlide(940, rightArrow)
+    changeSlide(940, leftArrow)
   } else if (+window.innerWidth > 585) {
-    changeSlide(600, rightArrow)
+    changeSlide(600, leftArrow)
   }
 })
 
-leftArrow.addEventListener('click', () => {
+rightArrow.addEventListener('click', () => {
   if (+window.innerWidth > 1320) {
-    changeSlide(-1160, leftArrow)
+    changeSlide(-1160, rightArrow)
   } else if (+window.innerWidth > 965) {
-    changeSlide(-940, leftArrow)
+    changeSlide(-940, rightArrow)
   } else if (+window.innerWidth > 585) {
-    changeSlide(-600, leftArrow)
+    changeSlide(-600, rightArrow)
   }
 })

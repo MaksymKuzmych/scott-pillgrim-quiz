@@ -1,0 +1,39 @@
+{
+  "name": "maksymkuzmych-jsfe2022q3",
+  "version": "1.0.0",
+  "description": "Private repository for @maksymkuzmych",
+  "main": "index.js",
+  "scripts": {
+    "start": "set NODE_ENV=development&&webpack serve",
+    "build-dev": "set NODE_ENV=development&&webpack",
+    "build-prod": "set NODE_ENV=production&&webpack",
+    "clear": "rd /s /q dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rolling-scopes-school/maksymkuzmych-JSFE2022Q3.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rolling-scopes-school/maksymkuzmych-JSFE2022Q3/issues"
+  },
+  "homepage": "https://github.com/rolling-scopes-school/maksymkuzmych-JSFE2022Q3#readme",
+  "dependencies": {
+    "tone": "^14.7.77",
+    "web-dev-server": "^3.0.27",
+    "webpack-cli": "^4.10.0"
+  },
+  "devDependencies": {
+    "css-loader": "^6.7.1",
+    "html-loader": "^4.2.0",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.6.1",
+    "sass": "^1.55.0",
+    "sass-loader": "^13.1.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.74.0",
+    "webpack-dev-server": "^4.11.1"
+  }
+}

@@ -74,7 +74,7 @@ class GameField {
       if (!isPaused) {
         clearInterval(interval)
         isPaused = true
-        stop.style.background = 'gray'
+        stop.classList.add('switch')
       } else {
         interval = setInterval(() => {
           timer(time, sec, min)
@@ -85,7 +85,7 @@ class GameField {
           }
         }, 1000)
         isPaused = false
-        stop.style.background = '#0d9095'
+        stop.classList.remove('switch')
       }
     })
 
@@ -127,10 +127,10 @@ class GameField {
 
     sound.addEventListener('click', () => {
       if (isSound) {
-        sound.style.background = 'gray'
+        sound.classList.add('switch')
         isSound = false
       } else {
-        sound.style.background = '#0d9095'
+        sound.classList.remove('switch')
         isSound = true
       }
     })
@@ -177,7 +177,7 @@ class GameField {
         }
 
         gameCell.drawCell().addEventListener('click', () => {
-          if (movePuzzle(arr, i, j, this.size, gameCell.width * this.size)) {
+          if (movePuzzle(!isPaused && arr, i, j, this.size, gameCell.width * this.size)) {
             if (isSound) {
               boopMe()
             }

@@ -30,6 +30,42 @@ function randomPuzzle(size) {
       break
   }
   array = array.sort(() => Math.round(Math.random() * 100) - 50)
+
+  let inversions = 0
+  let checkedArr = array.filter((el) => el !== '')
+
+  if (size % 2 !== 0) {
+    checkedArr.forEach((el, idx) => {
+      inversions += checkedArr.slice(idx + 1).filter((el1) => el > el1).length
+    })
+
+    while (inversions % 2 !== 0) {
+      inversions = 0
+      array = array.sort(() => Math.round(Math.random() * 100) - 50)
+      checkedArr = array.filter((el) => el !== '')
+      checkedArr.forEach((el, idx) => {
+        inversions += checkedArr.slice(idx + 1).filter((el1) => el1 < el).length
+      })
+    }
+  }
+
+  if (size % 2 === 0) {
+    checkedArr.forEach((el, idx) => {
+      inversions += checkedArr.slice(idx + 1).filter((el1) => el > el1).length
+    })
+    inversions += Number.parseInt(array.indexOf('') / size)
+
+    while (inversions % 2 === 0) {
+      inversions = 0
+      array = array.sort(() => Math.round(Math.random() * 100) - 50)
+      checkedArr = array.filter((el) => el !== '')
+      checkedArr.forEach((el, idx) => {
+        inversions += checkedArr.slice(idx + 1).filter((el1) => el1 < el).length
+      })
+      inversions += Number.parseInt(array.indexOf('') / size)
+    }
+  }
+
   const result = []
   for (let i = 0; i < array.length; i += size) {
     result.push(array.slice(i, i + size))

@@ -177,7 +177,7 @@ class GameField {
         }
 
         gameCell.drawCell().addEventListener('click', () => {
-          if (movePuzzle(!isPaused && arr, i, j, this.size, gameCell.width * this.size)) {
+          if (!isPaused && movePuzzle(arr, i, j, this.size, gameCell.width * this.size)) {
             if (isSound) {
               boopMe()
             }

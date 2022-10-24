@@ -35,6 +35,10 @@ body {
         cursor: pointer;
       }
 
+      .button:active {
+        background: #e5e5e5;
+      }
+
       .switch {
         background: #666666;
       }

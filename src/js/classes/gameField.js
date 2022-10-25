@@ -203,6 +203,7 @@ class GameField {
               if (JSON.stringify(arr.flat(Infinity)) === JSON.stringify(winCondition)) {
                 setLocalStorageResults(`Size: ${this.size}x${this.size}, time: ${time.innerText.slice(7, 12)}, moves: ${counter}\n`)
                 alert(`Hooray! You solved the puzzle in ${time.innerText.slice(7, 12)} and ${counter} moves!`)
+                isPaused = true
               }
             }, 120)
           }

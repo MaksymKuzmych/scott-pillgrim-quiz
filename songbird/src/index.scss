@@ -1,0 +1,47 @@
+@import './components/start-page/start.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.body {
+  background: #222;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.header {
+  padding: 10px 10px 5px 10px;
+
+  &__content {
+    width: 150px;
+    margin-right: auto;
+  }
+
+  &__logo {
+    width: 100%;
+  }
+}
+
+.main {
+  flex: 1 1 auto;
+}
+
+.footer {
+  padding: 10px;
+
+  &__content {
+    display: flex;
+    justify-content: end;
+    gap: 30px;
+  }
+
+  &__img {
+    height: 30px;
+  }
+}

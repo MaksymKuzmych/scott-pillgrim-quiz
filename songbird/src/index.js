@@ -1,7 +1,7 @@
 import './index.html'
 import './index.scss'
+import catalogPage from './components/catalog-page/catalog.html'
+import quizPage from './components/quiz-page/quiz.html'
+import resultsPage from './components/results-page/results.html'
 import startPage from './components/start-page/start.html'
-
-const main = document.querySelector('.main')
-
-main.insertAdjacentHTML('beforeend', startPage)
+import songsData from './assets/songs-data/songs.js'

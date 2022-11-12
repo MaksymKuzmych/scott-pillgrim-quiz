@@ -1,3 +1,6 @@
+@import './components/catalog-page/catalog.scss';
+@import './components/quiz-page/quiz.scss';
+@import './components/results-page/results.scss';
 @import './components/start-page/start.scss';
 
 * {
@@ -7,25 +10,13 @@
   box-sizing: border-box;
 }
 
+html,
 .body {
   background: #222;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100%;
-}
-
-.header {
-  padding: 10px 10px 5px 10px;
-
-  &__content {
-    width: 150px;
-    margin-right: auto;
-  }
-
-  &__logo {
-    width: 100%;
-  }
+  min-height: 100%;
 }
 
 .main {

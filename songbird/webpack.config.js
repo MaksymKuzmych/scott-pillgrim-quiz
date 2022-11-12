@@ -16,6 +16,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.[contenthash].js',
     clean: true,
+    assetModuleFilename: 'assets/[name][ext]',
   },
   target,
   devtool,
@@ -36,6 +37,14 @@ module.exports = {
       {
         test: /\.s[ac]ss$/i,
         use: [devMode ? 'style-loader' : MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+      },
+      {
+        test: /\.(png|gif|jpg|jpeg|ico)$/,
+        type: 'asset/resource',
+      },
+      {
+        test: /\.(mp3)$/,
+        type: 'asset/resource',
       },
     ],
   },

@@ -2,6 +2,7 @@
 @import './components/quiz-page/quiz.scss';
 @import './components/results-page/results.scss';
 @import './components/start-page/start.scss';
+@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
 
 * {
   margin: 0;
@@ -16,11 +17,17 @@ html,
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 100%;
+  min-height: 100vh;
 }
 
 .main {
   flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('./assets/img/wallpapers/scott-pilgrim-background.webp');
+  background-size: auto 100%;
+  background-position: center;
 }
 
 .footer {
@@ -35,4 +42,188 @@ html,
   &__img {
     height: 30px;
   }
+}
+
+//Audio Player
+.audio-player {
+  display: block;
+  margin: 0 auto;
+  height: 50px;
+  width: 97.5%;
+  background: #444;
+  box-shadow: 0 0 20px 0 #000a;
+  font-family: arial;
+  color: #fdfffc;
+  font-size: 0.75em;
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: 6px auto;
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+
+  .timeline {
+    background: #fdfffc;
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 2px 10px 0 #0008;
+
+    .progress {
+      background: #ffbe0b;
+      width: 0%;
+      height: 100%;
+      transition: 0.25s;
+    }
+  }
+
+  .controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 0 20px;
+
+    > * {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .toggle-play {
+      &.play {
+        cursor: pointer;
+        position: relative;
+        left: 0;
+        height: 0;
+        width: 0;
+        border: 7px solid #0000;
+        border-left: 13px solid;
+        border-left-color: #fdfffc;
+        transition: border-left-color 0.3s;
+
+        &:hover {
+          transform: scale(1.1);
+          border-left-color: #ffbe0b;
+        }
+      }
+
+      &.pause {
+        height: 15px;
+        width: 20px;
+        cursor: pointer;
+        position: relative;
+
+        &:before {
+          position: absolute;
+          top: 0;
+          left: 0px;
+          background: #fdfffc;
+          content: '';
+          height: 15px;
+          width: 3px;
+          transition: background-color 0.3s;
+        }
+
+        &:after {
+          position: absolute;
+          top: 0;
+          right: 8px;
+          background-color: #fdfffc;
+          content: '';
+          height: 15px;
+          width: 3px;
+          transition: background-color 0.3s;
+        }
+
+        &:hover {
+          transform: scale(1.1);
+
+          &:before {
+            background-color: #ffbe0b;
+          }
+
+          &:after {
+            background: #ffbe0b;
+          }
+        }
+      }
+    }
+
+    .time {
+      font-family: 'Metal Mania', cursive;
+      display: flex;
+      margin-right: auto;
+
+      > * {
+        padding: 2px;
+      }
+    }
+
+    .volume-container {
+      cursor: pointer;
+      position: relative;
+      z-index: 2;
+
+      .volume-button {
+        margin-left: 10px;
+        height: 26px;
+        width: 26px;
+        display: flex;
+        align-items: center;
+
+        .volume {
+          background-position: center;
+          background-size: cover;
+          height: 26px;
+          width: 26px;
+          transform: scale(0.7);
+        }
+
+        .volume-on {
+          background-image: url('./assets/svg/volume-on.svg');
+        }
+
+        .volume-off {
+          background-image: url('./assets/svg/volume-off.svg');
+        }
+      }
+
+      .volume-slider {
+        position: absolute;
+        left: -3px;
+        top: 15px;
+        z-index: -1;
+        width: 0;
+        height: 15px;
+        background: #fdfffc;
+        box-shadow: 0 0 20px #000a;
+        transition: 0.25s;
+
+        .volume-percentage {
+          background: #ffbe0b;
+          height: 100%;
+          width: 75%;
+        }
+      }
+
+      &:hover {
+        .volume-slider {
+          left: -170px;
+          width: 175px;
+        }
+      }
+    }
+
+    .name {
+      text-align: center;
+      font-family: 'Metal Mania', cursive;
+      width: 150px;
+    }
+  }
+}
+
+.hide {
+  display: none;
 }

@@ -1,0 +1,229 @@
+.quiz-wrapper {
+  width: 100%;
+  position: relative;
+  margin: 10px 5px;
+  max-width: 1000px;
+  background: rgba(255, 255, 255, 0.8);
+
+  .quiz__header {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+
+    .quiz__score {
+      font-family: 'Rubik Wet Paint', cursive;
+      font-size: 1.2em;
+    }
+
+    .quiz-back {
+      height: 25px;
+      cursor: pointer;
+    }
+  }
+
+  .quiz {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+
+    &__genres {
+      display: flex;
+
+      .genre {
+        display: flex;
+        font-family: 'Rubik Wet Paint', cursive;
+        font-size: 1.2em;
+        flex: 1 1 auto;
+        padding: 3px;
+        justify-content: center;
+        align-items: center;
+        background: #222;
+        color: #ffbe0b;
+        border: 1px solid #ffbe0b;
+      }
+
+      .active {
+        color: #fdfffc;
+        border: 1px solid #fdfffc;
+      }
+    }
+
+    .quiz__question {
+      display: flex;
+      padding: 0 5px;
+      gap: 5px;
+
+      .question__image-wrapper {
+        flex: 1 1 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .question__image {
+          height: 100px;
+          width: 100px;
+        }
+      }
+
+      .question__info {
+        flex: 1 1 70%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+
+        .question__name {
+          font-family: 'Rubik Wet Paint', cursive;
+          font-size: 1.2em;
+          text-align: center;
+        }
+      }
+    }
+
+    .quiz__options {
+      display: flex;
+
+      .options__choice {
+        flex: 0 1 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        gap: 5px;
+
+        .choice {
+          font-family: 'Metal Mania', cursive;
+          text-align: center;
+          width: 80%;
+          padding: 5px;
+          background: #222;
+          color: #fdfffc;
+          transition: all 0.5s;
+          border-radius: 10px 100px / 120px;
+
+          &:hover {
+            color: #ffbe0b;
+          }
+        }
+
+        .right {
+          color: #ffbe0b;
+        }
+
+        .wrong {
+          text-decoration: line-through;
+          color: grey;
+          &:hover {
+            color: grey;
+          }
+        }
+      }
+
+      .options__catalog {
+        flex: 1 1 70%;
+        gap: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 3px;
+
+        .options__img {
+          height: 250px;
+        }
+
+        .options__info {
+          display: flex;
+          flex-direction: column;
+          height: 250px;
+
+          .info__audio {
+            flex: 0 0 30%;
+          }
+
+          .info__description {
+            flex: 1 1 70%;
+            margin-left: auto;
+            overflow-y: scroll;
+
+            &::-webkit-scrollbar-track {
+              padding: 2px 0;
+              background-color: transparent;
+            }
+
+            &::-webkit-scrollbar {
+              width: 5px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+              border-radius: 5px;
+              box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+              background-color: #737272;
+              border: 1px solid #000;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .next__btn {
+    margin: 5px 5px 5px auto;
+    display: block;
+    font-family: 'Metal Mania', cursive;
+    padding: 5px 50px;
+    background: #222;
+    color: #fdfffc;
+    transition: all 0.5s;
+    border-radius: 10px 100px / 120px;
+    font-size: 1.2em;
+    transition: all 0.5;
+
+    &:hover {
+      color: #ffbe0b;
+    }
+
+    &:disabled {
+      color: grey;
+      cursor: default;
+    }
+  }
+}
+
+@media (max-width: 970px) {
+  .quiz-wrapper {
+    width: 500px;
+
+    .quiz {
+      &__genres {
+        .genre {
+          font-size: 0.8em;
+        }
+      }
+    }
+
+    .quiz__question {
+      flex-direction: column;
+
+      .question__info {
+        flex-direction: column;
+      }
+    }
+
+    .quiz__options {
+      flex-direction: column;
+
+      .options__choice {
+        flex-direction: column;
+      }
+
+      .options__catalog {
+        flex-direction: column;
+
+        .options__info {
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}

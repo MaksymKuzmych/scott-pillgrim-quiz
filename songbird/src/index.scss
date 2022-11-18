@@ -3,6 +3,7 @@
 @import './components/results-page/results.scss';
 @import './components/start-page/start.scss';
 @import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import './css/audio-player.scss';
 
 * {
@@ -10,6 +11,7 @@
   padding: 0;
   outline: none;
   box-sizing: border-box;
+  font-family: 'Metal Mania', 'Rubik Wet Paint', 'Roboto', cursive;
 }
 
 button {

@@ -5,8 +5,10 @@ import quizPage from './components/quiz-page/quiz.html'
 import resultsPage from './components/results-page/results.html'
 import startPage from './components/start-page/start.html'
 import songsData from './assets/songs-data/songs.js'
+import enemiesData from './assets/enemies-data/enemies'
 import fillData from './components/catalog-page/catalog.js'
 import { result, clearResult, clearQuiz, pauseAudio, fillAnswerQuiz, fillQuestionQuiz } from './components/quiz-page/quiz.js'
+import showResults from './components/results-page/results'
 
 const main = document.querySelector('.main')
 
@@ -27,7 +29,7 @@ backArrows.forEach((el) => {
   el.addEventListener('click', () => {
     document.querySelector('.catalog-wrapper').classList.add('hide')
     document.querySelector('.quiz-wrapper').classList.add('hide')
-    // document.querySelector('.results-wrapper').classList.add('hide')
+    document.querySelector('.results-wrapper').classList.add('hide')
     document.querySelector('.start-wrapper').classList.remove('hide')
   })
 })
@@ -48,7 +50,7 @@ const genres = document.querySelectorAll('.genre')
 startBtn.addEventListener('click', () => {
   document.querySelector('.start-wrapper').classList.add('hide')
   document.querySelector('.quiz-wrapper').classList.remove('hide')
-  fillAnswerQuiz(songsData[roundNumber])
+  fillAnswerQuiz(songsData[roundNumber], enemiesData[roundNumber])
   fillQuestionQuiz(songsData[roundNumber], result)
   genres[roundNumber].classList.add('active')
 })
@@ -63,10 +65,20 @@ nextLevelBtn.addEventListener('click', () => {
     genres[roundNumber].classList.remove('active')
     roundNumber++
     genres[roundNumber].classList.add('active')
-    fillAnswerQuiz(songsData[roundNumber])
+    fillAnswerQuiz(songsData[roundNumber], enemiesData[roundNumber])
     fillQuestionQuiz(songsData[roundNumber])
     nextLevelBtn.disabled = true
-  } else {
+  }
+  if (nextLevelBtn.innerText === 'Results') {
+    //Show Results
+    document.querySelector('.quiz-wrapper').classList.add('hide')
+    document.querySelector('.results-wrapper').classList.remove('hide')
+    showResults()
+
+    //Clear Quiz Page
+    clearQuizPage()
+  }
+  if (roundNumber === 5) {
     nextLevelBtn.innerHTML = 'Results'
   }
 })
@@ -74,10 +86,12 @@ nextLevelBtn.addEventListener('click', () => {
 //Clear Quiz Page when Back
 const quizBackArrow = document.querySelector('.quiz-back')
 
-quizBackArrow.addEventListener('click', () => {
+function clearQuizPage() {
   genres[roundNumber].classList.remove('active')
   pauseAudio()
   clearQuiz()
   clearResult()
   roundNumber = 0
-})
+}
+
+quizBackArrow.addEventListener('click', clearQuizPage)

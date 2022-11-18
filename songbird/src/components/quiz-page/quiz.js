@@ -2,11 +2,15 @@ import createPlayer from '../../js/create-player'
 import audioPlayerFunc from '../../js/audio-player'
 import mixArray from '../../js/mix-array'
 import questionMark from '../../assets/png/question-mark.png'
-import scottPilgrim from '../../assets/png/comics-scott-pilgrim.png'
+import defeatEffect from '../../assets/music/effects/defeat.mp3'
+import winEffect from '../../assets/music/effects/win.mp3'
 
 let questSong
 let answerSong
 export let result = 0
+
+const winAudio = new Audio(winEffect)
+const defeatAudio = new Audio(defeatEffect)
 
 export function fillQuestionQuiz(data) {
   let intermediateResult = 6
@@ -16,8 +20,11 @@ export function fillQuestionQuiz(data) {
   const questName = document.querySelector('.question__name')
   const questAudio = document.querySelector('.question__audio')
   const questImage = document.querySelector('.question__image-wrapper')
+  const nextLevelBtn = document.querySelector('.next__btn')
   let randomIdx = Math.floor(Math.random() * data.length)
-  console.log(randomIdx)
+  nextLevelBtn.innerText = 'Next Level'
+
+  //create Audio Player
   questAudio.innerHTML = ''
   createPlayer(questAudio, data[randomIdx].audio, '')
   questSong = new Audio(data[randomIdx].audio)
@@ -30,7 +37,11 @@ export function fillQuestionQuiz(data) {
     el.addEventListener('click', () => {
       if (el.innerText === data[randomIdx].nameEN) {
         //If Guessed
-        result += intermediateResult
+
+        if (!el.classList.contains('right')) {
+          result += intermediateResult
+          winAudio.play()
+        }
         isGuessed = true
 
         //Change Score
@@ -58,8 +69,6 @@ export function fillQuestionQuiz(data) {
         el.classList.add('right')
 
         //Enable Next Button
-        const nextLevelBtn = document.querySelector('.next__btn')
-        nextLevelBtn.innerHTML = 'Next Level'
         nextLevelBtn.disabled = false
       } else if (!isGuessed) {
         if (!el.classList.contains('wrong')) {
@@ -67,14 +76,15 @@ export function fillQuestionQuiz(data) {
           intermediateResult--
         }
         //Change Answer Style
+        defeatAudio.play()
         el.classList.add('wrong')
       }
     })
   })
 }
 
-export function fillAnswerQuiz(data) {
-  let mixedData = mixArray(data)
+export function fillAnswerQuiz(songData, enemyData) {
+  let mixedData = mixArray(songData)
 
   //fill Answer Area
   const quizChoice = document.querySelector('.options__choice')
@@ -83,16 +93,27 @@ export function fillAnswerQuiz(data) {
     quizChoice.insertAdjacentHTML('beforeend', `<button class='choice'>${song.nameEN}</button>`)
   })
 
-  //Fill Quiz Catalog when click Answer
-  const choiceBtns = document.querySelectorAll('.choice')
+  //Fill Catalog by Enemy
   const infoImg = document.querySelector('.options__img-wrapper')
   const infoAudio = document.querySelector('.info__audio')
   const infoDescription = document.querySelector('.info__description')
+  const image = new Image()
+  image.src = enemyData.photo
+  image.style.width = '200px'
+  image.style.height = '200px'
+  infoImg.innerHTML = ''
+  infoImg.appendChild(image)
+
+  infoAudio.innerHTML = enemyData.nameEN
+  infoDescription.innerHTML = enemyData.descriptionEN
+
+  //Fill Quiz Catalog when click Answer
+  const choiceBtns = document.querySelectorAll('.choice')
 
   choiceBtns.forEach((el) => {
     el.addEventListener('click', () => {
       answerSong?.pause()
-      let song = data.find((songData) => songData.nameEN === el.innerText)
+      let song = songData.find((song) => song.nameEN === el.innerText)
 
       //Fill Quiz Catalog Image
       const image = new Image()
@@ -157,13 +178,6 @@ export function clearQuiz() {
   imageQuest.style.height = '100px'
   questImage.innerHTML = ''
   questImage.appendChild(imageQuest)
-
-  //Return the Scott Image
-  const imageScott = new Image()
-  imageScott.src = scottPilgrim
-  imageScott.style.height = '250px'
-  infoImg.innerHTML = ''
-  infoImg.appendChild(imageScott)
 
   //Clear Audio and Description
   infoAudio.innerHTML = ''

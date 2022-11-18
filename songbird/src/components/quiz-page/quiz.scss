@@ -11,7 +11,6 @@
     padding: 5px;
 
     .quiz__score {
-      font-family: 'Rubik Wet Paint', cursive;
       font-size: 1.2em;
     }
 
@@ -32,7 +31,6 @@
 
       .genre {
         display: flex;
-        font-family: 'Rubik Wet Paint', cursive;
         font-size: 1.2em;
         flex: 1 1 auto;
         padding: 3px;
@@ -74,7 +72,6 @@
         gap: 10px;
 
         .question__name {
-          font-family: 'Rubik Wet Paint', cursive;
           font-size: 1.2em;
           text-align: center;
         }
@@ -93,7 +90,6 @@
         gap: 5px;
 
         .choice {
-          font-family: 'Metal Mania', cursive;
           text-align: center;
           width: 80%;
           padding: 5px;
@@ -128,22 +124,24 @@
         align-items: center;
         padding: 3px;
 
-        .options__img {
-          height: 250px;
-        }
-
         .options__info {
           display: flex;
           flex-direction: column;
-          height: 250px;
+          height: 232px;
+          font-family: 'Metal Mania', 'Roboto', cursive;
 
           .info__audio {
-            flex: 0 0 30%;
+            flex: 0 1 30%;
+            font-size: 1.2em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
           }
 
           .info__description {
             flex: 1 1 70%;
             margin-left: auto;
+            text-align: center;
             overflow-y: scroll;
 
             &::-webkit-scrollbar-track {
@@ -170,7 +168,6 @@
   .next__btn {
     margin: 5px 5px 5px auto;
     display: block;
-    font-family: 'Metal Mania', cursive;
     padding: 5px 50px;
     background: #222;
     color: #fdfffc;

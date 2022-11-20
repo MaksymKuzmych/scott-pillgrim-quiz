@@ -13,7 +13,7 @@ const winAudio = new Audio(winEffect)
 const defeatAudio = new Audio(defeatEffect)
 
 export function fillQuestionQuiz(data, lang) {
-  let intermediateResult = 6
+  let intermediateResult = 5
   let isGuessed = false
 
   //Fill Quest

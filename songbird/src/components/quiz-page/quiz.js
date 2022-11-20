@@ -12,7 +12,7 @@ export let result = 0
 const winAudio = new Audio(winEffect)
 const defeatAudio = new Audio(defeatEffect)
 
-export function fillQuestionQuiz(data) {
+export function fillQuestionQuiz(data, lang) {
   let intermediateResult = 6
   let isGuessed = false
 
@@ -22,7 +22,11 @@ export function fillQuestionQuiz(data) {
   const questImage = document.querySelector('.question__image-wrapper')
   const nextLevelBtn = document.querySelector('.next__btn')
   let randomIdx = Math.floor(Math.random() * data.length)
-  nextLevelBtn.innerText = 'Next Level'
+  if (lang === 'EN') {
+    nextLevelBtn.innerText = 'Next Level'
+  } else {
+    nextLevelBtn.innerText = 'Следующий уровень'
+  }
 
   //create Audio Player
   questAudio.innerHTML = ''
@@ -33,14 +37,18 @@ export function fillQuestionQuiz(data) {
 
   //Add Choice Listener
   const choiceBtns = document.querySelectorAll('.choice')
+  const winImg = document.querySelector('.win-img')
+  const blackout = document.querySelector('.blackout')
   choiceBtns.forEach((el) => {
     el.addEventListener('click', () => {
-      if (el.innerText === data[randomIdx].nameEN) {
+      if (el.innerText === data[randomIdx][`name${lang}`]) {
         //If Guessed
 
         if (!el.classList.contains('right')) {
           result += intermediateResult
           winAudio.play()
+          winImg.classList.add('win-img_show')
+          blackout.classList.add('blackout_show')
         }
         isGuessed = true
 
@@ -63,7 +71,7 @@ export function fillQuestionQuiz(data) {
         questImage.appendChild(image)
 
         //Fill Quest Name
-        questName.innerHTML = data[randomIdx].nameEN
+        questName.innerHTML = data[randomIdx][`name${lang}`]
 
         //Change Answer Style
         el.classList.add('right')
@@ -83,14 +91,14 @@ export function fillQuestionQuiz(data) {
   })
 }
 
-export function fillAnswerQuiz(songData, enemyData) {
+export function fillAnswerQuiz(songData, enemyData, lang) {
   let mixedData = mixArray(songData)
 
   //fill Answer Area
   const quizChoice = document.querySelector('.options__choice')
   quizChoice.innerHTML = ''
   mixedData.forEach((song) => {
-    quizChoice.insertAdjacentHTML('beforeend', `<button class='choice'>${song.nameEN}</button>`)
+    quizChoice.insertAdjacentHTML('beforeend', `<button class='choice'>${song[`name${lang}`]}</button>`)
   })
 
   //Fill Catalog by Enemy
@@ -103,9 +111,15 @@ export function fillAnswerQuiz(songData, enemyData) {
   image.style.height = '200px'
   infoImg.innerHTML = ''
   infoImg.appendChild(image)
+  let prompt = ''
+  if (lang === 'EN') {
+    prompt = 'Guess the song to defeat the opponent\n'
+  } else {
+    prompt = 'Угадайте песню, чтобы победить противника\n'
+  }
 
-  infoAudio.innerHTML = enemyData.nameEN
-  infoDescription.innerHTML = enemyData.descriptionEN
+  infoAudio.innerText = prompt
+  infoDescription.innerHTML = enemyData[`description${lang}`]
 
   //Fill Quiz Catalog when click Answer
   const choiceBtns = document.querySelectorAll('.choice')
@@ -113,7 +127,7 @@ export function fillAnswerQuiz(songData, enemyData) {
   choiceBtns.forEach((el) => {
     el.addEventListener('click', () => {
       answerSong?.pause()
-      let song = songData.find((song) => song.nameEN === el.innerText)
+      let song = songData.find((song) => song[`name${lang}`] === el.innerText)
 
       //Fill Quiz Catalog Image
       const image = new Image()
@@ -125,7 +139,7 @@ export function fillAnswerQuiz(songData, enemyData) {
 
       //Fill Quiz Catalog Audio
       infoAudio.innerHTML = ''
-      createPlayer(infoAudio, song.audio, song.nameEN)
+      createPlayer(infoAudio, song.audio, song[`name${lang}`])
       answerSong = new Audio(song.audio)
       const audioPlayer = document.querySelector('.info__audio > .audio-player')
       audioPlayerFunc(answerSong, audioPlayer)
@@ -150,7 +164,12 @@ export function fillAnswerQuiz(songData, enemyData) {
       })
 
       //Fill Quiz Catalog Description
-      infoDescription.innerHTML = song.descriptionEN
+      if (lang === 'EN') {
+        infoDescription.style.fontFamily = 'Metal Mania'
+      } else {
+        infoDescription.style.fontFamily = 'Pangolin'
+      }
+      infoDescription.innerHTML = song[`description${lang}`]
     })
   })
 }

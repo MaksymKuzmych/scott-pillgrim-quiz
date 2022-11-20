@@ -2,16 +2,19 @@
 @import './components/quiz-page/quiz.scss';
 @import './components/results-page/results.scss';
 @import './components/start-page/start.scss';
-@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import './components/description-page/description.scss';
+@import './components/warning-page/warning.scss';
 @import './css/audio-player.scss';
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   outline: none;
   box-sizing: border-box;
-  font-family: 'Metal Mania', 'Rubik Wet Paint', 'Roboto', cursive;
+  font-family: 'Metal Mania', 'Pangolin', cursive;
 }
 
 button {
@@ -27,6 +30,18 @@ html,
   min-height: 100vh;
 }
 
+.blackout {
+  position: absolute;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.blackout_show {
+  z-index: 2;
+}
+
 .main {
   flex: 1 1 auto;
   display: flex;
@@ -40,9 +55,45 @@ html,
 .footer {
   padding: 10px;
 
+  &__lang-wrapper {
+    width: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    .lang {
+      padding: 5px 10px;
+      width: 50px;
+      background: #222;
+      color: #fdfffc;
+      border-radius: 50% 20% / 10% 40%;
+      transition: all 0.5s;
+
+      &:hover {
+        color: #ffbe0b;
+      }
+
+      &:disabled {
+        cursor: not-allowed;
+
+        &:hover {
+          color: grey;
+        }
+      }
+    }
+
+    .active {
+      color: #ffbe0b;
+    }
+  }
+
   &__content {
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
+  }
+
+  &__links {
+    display: flex;
     gap: 30px;
   }
 

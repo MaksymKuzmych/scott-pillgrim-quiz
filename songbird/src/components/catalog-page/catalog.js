@@ -4,17 +4,19 @@ import createPlayer from '../../js/create-player'
 
 const songs = {}
 
-export default function fillData(data) {
+export default function fillData(data, lang) {
   //Fill Songs
   const music = document.querySelector('.catalog__music')
   data.forEach((arr) => {
     arr.forEach((el) => {
-      createPlayer(music, el.audio, el.nameEN)
-      const audioPlayerAll = document.querySelectorAll('.audio-player')
-      const audioPlayer = audioPlayerAll[audioPlayerAll.length - 1]
-      const audio = new Audio(el.audio)
-      songs[el.nameEN] = audio
-      audioPlayerFunc(audio, audioPlayer, songs)
+      if (!songs[el.nameEN]) {
+        createPlayer(music, el.audio, el.nameEN)
+        const audioPlayerAll = document.querySelectorAll('.audio-player')
+        const audioPlayer = audioPlayerAll[audioPlayerAll.length - 1]
+        const audio = new Audio(el.audio)
+        songs[el.nameEN] = audio
+        audioPlayerFunc(audio, audioPlayer, songs)
+      }
     })
   })
 
@@ -39,7 +41,7 @@ export default function fillData(data) {
       const imgWrapper = document.querySelector('.catalog__img-wrapper')
       const songText = document.querySelector('.catalog__text')
       let currentSong = data.flat(Infinity).find((el) => el.nameEN === key)
-
+      console.log(lang)
       //Add new Image
       const image = new Image()
       image.src = currentSong.image
@@ -48,13 +50,35 @@ export default function fillData(data) {
       imgWrapper.appendChild(image)
 
       //Add new Description
-      songText.innerHTML = currentSong.descriptionEN
+      songText.innerHTML = currentSong[`description${lang}`]
+      let langButtonEN = document.querySelector('.lang_en')
+      let langButtonRU = document.querySelector('.lang_ru')
+
+      langButtonEN.addEventListener('click', () => {
+        songText.style.fontFamily = 'Metal Mania'
+        songText.innerHTML = currentSong.descriptionEN
+      })
+
+      langButtonRU.addEventListener('click', () => {
+        songText.style.fontFamily = 'Pangolin'
+        songText.innerHTML = currentSong.descriptionRU
+      })
     })
   })
-  clearCatalogListener()
+
+  const songText = document.querySelector('.catalog__text')
+  if (lang === 'EN') {
+    songText.innerHTML =
+      "This catalog will allow you to familiarize yourself with the repertoire of your opponents. Prepare carefully to defeat all of Ramona's evil exes"
+  } else {
+    songText.innerHTML =
+      'Этот каталог позволит вам ознакомиться с репертуаром ваших противников. Подготовьтесь тщательно, чтобы победить всех злых бывших Рамоны'
+  }
+
+  clearCatalogListener(lang)
 }
 
-function clearCatalogListener() {
+function clearCatalogListener(lang) {
   const backArrow = document.querySelector('.catalog-back')
 
   //Pause Songs
@@ -81,7 +105,12 @@ function clearCatalogListener() {
 
     //Clear Description
     const songText = document.querySelector('.catalog__text')
-    songText.innerHTML =
-      'Этот каталог позволит вам ознакомиться с репертуаром ваших противников. Подготовьтесь тщательно, чтобы победить всех злых бывших Рамоны'
+    if (lang === 'EN') {
+      songText.innerHTML =
+        "This catalog will allow you to familiarize yourself with the repertoire of your opponents. Prepare carefully to defeat all of Ramona's evil exes"
+    } else {
+      songText.innerHTML =
+        'Этот каталог позволит вам ознакомиться с репертуаром ваших противников. Подготовьтесь тщательно, чтобы победить всех злых бывших Рамоны'
+    }
   })
 }

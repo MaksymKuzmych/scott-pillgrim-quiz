@@ -10,9 +10,9 @@ const enemiesData = [
     nameEN: 'Your opponent: Matthew Patel',
     nameRU: 'Ваш противник: Мэтью Патель',
     descriptionEN:
-      "Matthew Patel is Ramona's first evil ex. Attacks, Techniques and Abilities:\nSpellcraft is a generalized name for the supernatural abilities endowed (probably from birth) Matthew:\nPyrokinesis - can create fireballs from his fingers;\nLevitation - flying at a short distance from the ground;\nSummoning demonic entities - Matthew can summon Demon Hipsters that copy any of his moves and techniques;\nHand-to-Hand Combat - Matthew has very little hand-to-hand combat skills. Of course, he is far from Scott.",
+      "Matthew Patel is Ramona Flowers' first ex-boyfriend and a member of the League of Evil Exes. Matthew, along with levitation and pyrokinesis, is able to summon Demon Hipster Chicks which aid him in combat. He's a highly accomplished martial artist, capable of fighting on Scott's level and, along with Ramona, battling defeating several jocks.",
     descriptionRU:
-      'Мэттью Патель - первый злой бывший рамоны. Атаки, техники и способности:\nКолдовство - обобщённое наименование сверхъестественных способностей, которыми наделён (вероятно, с рождения) Мэттью:\nПирокинез - может создавать огненные шары из своих пальцев;\nЛевитация - полёт на небольшом расстоянии от земли;\nПризыв демонических сущностей - Мэттью может призывать Демонических Хипстерш, которые копируют любые его движения и приёмы;\nРукопашный бой - Мэттью совсем немного владеет навыками рукопашного боя. До Скотта ему, конечно, далеко.',
+      'Мэтью Патель — первый бывший парень Рамоны Флауэрс и член Лиги злых бывших. Мэтью, наряду с левитацией и пирокинезом, может вызывать птенцов-хипстеров-демонов, которые помогают ему в бою. Он опытный мастер боевых искусств, способный сражаться на уровне Скотта и вместе с Рамоной победить нескольких спортсменов.',
     photo: matthewPatel,
   },
   {

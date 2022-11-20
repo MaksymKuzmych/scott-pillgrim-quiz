@@ -128,6 +128,12 @@ descriptionBtn.addEventListener('click', () => {
 })
 
 //Change Language
+if (lang === 'EN') {
+  langButtonEN.classList.add('active')
+} else {
+  langButtonRU.classList.add('active')
+}
+
 langButtonEN.addEventListener('click', () => {
   lang = 'EN'
   localStorage.setItem('lang', 'EN')

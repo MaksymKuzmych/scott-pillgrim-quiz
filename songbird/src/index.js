@@ -30,6 +30,7 @@ main.insertAdjacentHTML('beforeend', descriptionPage)
 main.insertAdjacentHTML('beforeend', warningPage)
 
 changeLang(lang, result)
+fillData(songsData, lang)
 
 document.querySelector('.start-wrapper').classList.remove('hide')
 
@@ -55,7 +56,6 @@ const catalogBtn = document.querySelector('.btn__catalog')
 catalogBtn.addEventListener('click', () => {
   document.querySelector('.start-wrapper').classList.add('hide')
   document.querySelector('.catalog-wrapper').classList.remove('hide')
-  fillData(songsData, lang)
 })
 
 //Open Warning and Start

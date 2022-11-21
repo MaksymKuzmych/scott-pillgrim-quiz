@@ -43,7 +43,6 @@ export function fillQuestionQuiz(data, lang) {
     el.addEventListener('click', () => {
       if (el.innerText === data[randomIdx][`name${lang}`]) {
         //If Guessed
-
         if (!el.classList.contains('right')) {
           result += intermediateResult
           winAudio.play()
@@ -79,10 +78,11 @@ export function fillQuestionQuiz(data, lang) {
         //Enable Next Button
         nextLevelBtn.disabled = false
       } else if (!isGuessed) {
+        //Decrease the Result Only if first click
         if (!el.classList.contains('wrong')) {
-          //Decrease the Result Only if first click
           intermediateResult--
         }
+
         //Change Answer Style
         defeatAudio.play()
         el.classList.add('wrong')
@@ -94,7 +94,7 @@ export function fillQuestionQuiz(data, lang) {
 export function fillAnswerQuiz(songData, enemyData, lang) {
   let mixedData = mixArray(songData)
 
-  //fill Answer Area
+  //fill Answers Area
   const quizChoice = document.querySelector('.options__choice')
   quizChoice.innerHTML = ''
   mixedData.forEach((song) => {
@@ -105,12 +105,14 @@ export function fillAnswerQuiz(songData, enemyData, lang) {
   const infoImg = document.querySelector('.options__img-wrapper')
   const infoAudio = document.querySelector('.info__audio')
   const infoDescription = document.querySelector('.info__description')
+
   const image = new Image()
   image.src = enemyData.photo
   image.style.width = '200px'
   image.style.height = '200px'
   infoImg.innerHTML = ''
   infoImg.appendChild(image)
+
   let prompt = ''
   if (lang === 'EN') {
     prompt = 'Guess the song to defeat the opponent\n'
@@ -183,7 +185,6 @@ export function clearQuiz() {
   const questName = document.querySelector('.question__name')
   const questAudio = document.querySelector('.question__audio')
   const questImage = document.querySelector('.question__image-wrapper')
-  const infoImg = document.querySelector('.options__img-wrapper')
   const infoAudio = document.querySelector('.info__audio')
   const infoDescription = document.querySelector('.info__description')
 

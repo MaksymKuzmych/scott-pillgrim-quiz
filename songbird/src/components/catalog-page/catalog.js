@@ -41,7 +41,7 @@ export default function fillData(data, lang) {
       const imgWrapper = document.querySelector('.catalog__img-wrapper')
       const songText = document.querySelector('.catalog__text')
       let currentSong = data.flat(Infinity).find((el) => el.nameEN === key)
-      console.log(lang)
+
       //Add new Image
       const image = new Image()
       image.src = currentSong.image
@@ -54,6 +54,7 @@ export default function fillData(data, lang) {
       let langButtonEN = document.querySelector('.lang_en')
       let langButtonRU = document.querySelector('.lang_ru')
 
+      //Change Lang
       langButtonEN.addEventListener('click', () => {
         songText.style.fontFamily = 'Metal Mania'
         songText.innerHTML = currentSong.descriptionEN
@@ -66,6 +67,7 @@ export default function fillData(data, lang) {
     })
   })
 
+  //First Description
   const songText = document.querySelector('.catalog__text')
   if (lang === 'EN') {
     songText.innerHTML =
@@ -75,6 +77,7 @@ export default function fillData(data, lang) {
       'Этот каталог позволит вам ознакомиться с репертуаром ваших противников. Подготовьтесь тщательно, чтобы победить всех злых бывших Рамоны'
   }
 
+  //Add Listeners
   clearCatalogListener(lang)
 }
 

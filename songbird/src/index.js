@@ -20,7 +20,7 @@ const langButtonRU = document.querySelector('.lang_ru')
 let roundNumber = 0
 let lang = localStorage.getItem('lang') || 'EN'
 
-//build DOM
+//Build DOM
 main.insertAdjacentHTML('beforeend', startPage)
 main.insertAdjacentHTML('beforeend', quizPage)
 main.insertAdjacentHTML('beforeend', resultsPage)
@@ -92,17 +92,20 @@ nextLevelBtn.addEventListener('click', () => {
     fillQuestionQuiz(songsData[roundNumber], lang)
     nextLevelBtn.disabled = true
   }
-  if (nextLevelBtn.innerText === 'Results') {
-    //Show Results
+
+  if (nextLevelBtn.innerText === 'Results' || nextLevelBtn.innerHTML === 'Результаты') {
     document.querySelector('.quiz-wrapper').classList.add('hide')
     document.querySelector('.results-wrapper').classList.remove('hide')
     showResults(lang)
-
-    //Clear Quiz Page
     clearQuizPage()
   }
+
   if (roundNumber === 5) {
-    nextLevelBtn.innerHTML = 'Results'
+    if (lang === 'EN') {
+      nextLevelBtn.innerHTML = 'Results'
+    } else {
+      nextLevelBtn.innerHTML = 'Результаты'
+    }
   }
 })
 
@@ -155,7 +158,6 @@ langButtonRU.addEventListener('click', () => {
 })
 
 //Hide Blackout
-
 const winImg = document.querySelector('.win-img')
 const blackout = document.querySelector('.blackout')
 

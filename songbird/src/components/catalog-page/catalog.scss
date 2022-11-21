@@ -68,7 +68,7 @@
         }
 
         &::-webkit-scrollbar {
-          width: 5px;
+          width: 7px;
         }
 
         &::-webkit-scrollbar-thumb {
@@ -84,7 +84,7 @@
 
 @media (max-width: 970px) {
   .catalog-wrapper {
-    width: 500px;
+    max-width: 500px;
 
     .catalog-back {
       top: 200px;

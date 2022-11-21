@@ -111,6 +111,7 @@
         .wrong {
           text-decoration: line-through;
           color: grey;
+
           &:hover {
             color: grey;
           }
@@ -123,6 +124,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-top: 5px;
         padding: 3px;
 
         .options__info {

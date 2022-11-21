@@ -1,5 +1,6 @@
 import './index.html'
 import './index.scss'
+import './js/self-assessment.js'
 import catalogPage from './components/catalog-page/catalog.html'
 import descriptionPage from './components/description-page/description.html'
 import quizPage from './components/quiz-page/quiz.html'
@@ -61,6 +62,7 @@ catalogBtn.addEventListener('click', () => {
 const startBtn = document.querySelector('.btn__start')
 const genres = document.querySelectorAll('.genre')
 const warningBtn = document.querySelector('.warning__btn')
+const nextLevelBtn = document.querySelector('.next__btn')
 
 startBtn.addEventListener('click', () => {
   document.querySelector('.start-wrapper').classList.add('hide')
@@ -68,6 +70,7 @@ startBtn.addEventListener('click', () => {
 })
 
 warningBtn.addEventListener('click', () => {
+  nextLevelBtn.disabled = true
   document.querySelector('.start-wrapper').classList.add('hide')
   document.querySelector('.warning-wrapper').classList.add('hide')
   document.querySelector('.quiz-wrapper').classList.remove('hide')
@@ -79,8 +82,6 @@ warningBtn.addEventListener('click', () => {
 })
 
 //Switch Level
-const nextLevelBtn = document.querySelector('.next__btn')
-
 nextLevelBtn.addEventListener('click', () => {
   if (roundNumber < 5) {
     pauseAudio()
@@ -168,3 +169,9 @@ function hideWin() {
 
 blackout.addEventListener('click', hideWin)
 winImg.addEventListener('click', hideWin)
+
+setTimeout(() => {
+  alert(
+    'Приветствую. Если у вас не быстрый интернет, перед началом игры подождите пару минут пока подгрузятся данные (так как если ваш интернет не успеет подгрузить файлы, возможен undefined в некоторых местах). Также если по вашему мнению в работе есть недочёты, не скрывайте, пожалуйста, ник при проверке. Заранее спасибо!'
+  )
+}, 500)

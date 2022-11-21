@@ -41,7 +41,7 @@ export default function changeLang(lang, result) {
     })
     quizBtn.innerText = 'Next Level'
     descriptionInfo.innerText =
-      "Scott Pilgrim vs. the World is a test game where you have to win Ramona's heart. In order to do this, you need to fight 7 of her evil exes. To win, you need to guess the artist and the song your opponent is playing. If you manage to earn the maximum number of points, you will receive the RESPECT power. Good luck!"
+      "Scott Pilgrim vs. the World is a test game where you have to win Ramona's heart. In order to do this, you need to fight 7 of her evil exes. To win, you need to guess the artist and the song your opponent is playing. If you manage to earn the maximum number of points, you will receive the power of RESPECT. Good luck!"
     descriptionBackBtn.innerText = 'Back to main menu'
     warningInfo.innerText = "Make sure you select the correct language.\nIn the heat of battle, you just won't have time for it!"
     warningBtn.innerText = "I'm ready!"

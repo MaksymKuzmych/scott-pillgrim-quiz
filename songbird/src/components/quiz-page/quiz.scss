@@ -197,7 +197,7 @@
   .win-img {
     z-index: 2;
     width: 355px;
-    position: absolute;
+    position: fixed;
     top: -300%;
     left: 50%;
     transform: translate(-50%, -50%);

@@ -31,7 +31,8 @@ html,
 }
 
 .blackout {
-  position: absolute;
+  position: fixed;
+  top: 0;
   z-index: -1;
   width: 100vw;
   height: 100vh;
@@ -94,11 +95,24 @@ html,
 
   &__links {
     display: flex;
-    gap: 30px;
+    gap: 10px;
   }
 
   &__img {
     height: 30px;
+    transition: all 0.5s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__year {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    cursor: default;
   }
 }
 

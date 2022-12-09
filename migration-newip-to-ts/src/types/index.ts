@@ -33,7 +33,7 @@ export interface Sources {
     sources: Array<Source>;
 }
 
-enum Errors {
+export enum Errors {
     OK = 200,
     BadRequest = 400,
     Unauthorized = 401,
@@ -41,3 +41,7 @@ enum Errors {
     TooManyRequests = 429,
     InternalServerError = 500,
 }
+
+export type Options = {
+    [key: string]: string;
+};

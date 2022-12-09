@@ -32,3 +32,12 @@ export interface Sources {
     status: string;
     sources: Array<Source>;
 }
+
+enum Errors {
+    OK = 200,
+    BadRequest = 400,
+    Unauthorized = 401,
+    NotFound = 404,
+    TooManyRequests = 429,
+    InternalServerError = 500,
+}

@@ -43,4 +43,4 @@ export type Options = {
     [key: string]: string;
 };
 
-export type Callback<T> = (data: T) => void;
+export type Callback<T> = (data?: T) => void;

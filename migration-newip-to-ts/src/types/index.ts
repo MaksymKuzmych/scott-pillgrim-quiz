@@ -35,13 +35,12 @@ export interface Sources {
 
 export enum Errors {
     OK = 200,
-    BadRequest = 400,
     Unauthorized = 401,
     NotFound = 404,
-    TooManyRequests = 429,
-    InternalServerError = 500,
 }
 
 export type Options = {
     [key: string]: string;
 };
+
+export type Callback<T> = (data: T) => void;

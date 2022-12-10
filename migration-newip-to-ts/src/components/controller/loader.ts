@@ -1,4 +1,4 @@
-import { Errors, Options, Sources, News } from '../../types/index';
+import { Errors, Options, Sources, News, Callback } from '../../types/index';
 
 class Loader {
     public baseLink: string;
@@ -39,7 +39,7 @@ class Loader {
         return url.slice(0, -1);
     }
 
-    load(method: string, endpoint: string, callback: <T>(data: T) => void, options: Options = {}) {
+    load(method: string, endpoint: string, callback: Callback<Sources | News>, options: Options = {}) {
         fetch(this.makeUrl(options, endpoint), { method })
             .then(this.errorHandler)
             .then((res: Response) => res.json())

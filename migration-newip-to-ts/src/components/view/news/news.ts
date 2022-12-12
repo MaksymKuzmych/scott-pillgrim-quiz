@@ -29,7 +29,7 @@ class News {
 
             if (idx % 2) newsItem.classList.add('alt');
 
-            newsMetaPhoto.style.backgroundImage = `url(${item.urlToImage || 'img/news_placeholder.jpg'})`;
+            newsMetaPhoto.style.backgroundImage = `url(${item.urlToImage || './assets/news_placeholder.svg'})`;
             newsMetaAuthor.textContent = item.author || item.source.name;
             newsMetaDate.textContent = item.publishedAt.slice(0, 10).split('-').reverse().join('-');
 

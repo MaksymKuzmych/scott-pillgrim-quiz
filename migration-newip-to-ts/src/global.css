@@ -1,7 +1,20 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0 2px;
+}
+
 body {
     color: #fff;
-    background: #17181c;
-    font-family: sans-serif;
+    background: #264653;
+    font-family: 'Roboto', sans-serif;
 }
 
 header {
@@ -9,8 +22,15 @@ header {
 }
 
 header h1 {
-    font-size: 40px;
-    font-weight: 800;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 100px;
+    text-align: center;
+    margin: 0 auto;
+    color: #e76f51;
+}
+
+main {
+    flex: 1 1 auto;
 }
 
 footer {
@@ -21,15 +41,22 @@ footer {
 }
 footer .copyright {
     font-size: 14px;
-    color: #333;
+    color: #e76f51;
     text-align: center;
 }
 footer .copyright a {
-    color: #444;
+    color: #e76f51;
+    transition: color 0.5s;
 }
 footer .copyright a:hover {
-    color: #555;
+    color: #f4a261;
 }
 footer .copyright:before {
     content: '©';
 }
+
+@media (max-width: 490px) {
+    header h1 {
+        font-size: 60px;
+    }
+  }

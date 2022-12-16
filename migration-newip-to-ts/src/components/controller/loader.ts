@@ -1,7 +1,7 @@
 import { Errors, Options, Sources, News, Callback } from '../../types/index';
 
 class Loader {
-    public baseLink: string;
+    private baseLink: string;
     private options: Options;
 
     constructor(baseLink: string, options: Options) {

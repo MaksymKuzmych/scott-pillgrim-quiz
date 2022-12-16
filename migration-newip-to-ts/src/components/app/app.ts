@@ -3,8 +3,8 @@ import { AppView } from '../view/appView';
 import { Sources, News } from '../../types/index';
 
 class App {
-    protected controller: AppController;
-    protected view: AppView;
+    private controller: AppController;
+    private view: AppView;
 
     constructor() {
         this.controller = new AppController();

@@ -15,7 +15,7 @@ export interface New {
 export interface News {
     status: string;
     totalResults?: number;
-    articles?: Array<New>;
+    articles?: New[];
 }
 
 export interface Source {
@@ -30,7 +30,7 @@ export interface Source {
 
 export interface Sources {
     status: string;
-    sources?: Array<Source>;
+    sources?: Source[];
 }
 
 export enum Errors {

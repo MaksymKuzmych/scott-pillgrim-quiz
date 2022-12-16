@@ -7,24 +7,23 @@
     overflow: auto;
     align-items: center;
     font: 300 1em 'Fira Sans', sans-serif;
-    scroll-snap-type: y mandatory;
 }
 
 .sources::-webkit-scrollbar-track {
     padding: 2px 0;
     background-color: #e9c46a;
     border-radius: 5px;
-  }
+}
 
 .sources::-webkit-scrollbar {
     width: 5px;
-  }
+}
 
 .sources::-webkit-scrollbar-thumb {
     border-radius: 5px;
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
     background-color: #e76f51;
-  }
+}
 
 .source__item {
     background: none;
@@ -39,7 +38,6 @@
     color: #f4a261;
     transition: 0.3s;
     cursor: pointer;
-    scroll-snap-align: start;
 }
 
 .source__item:hover,
@@ -62,7 +60,7 @@
 }
 
 @media (max-width: 675px) {
-  .source__item {
-      width: 95%;
-  }
+    .source__item {
+        width: 95%;
+    }
 }

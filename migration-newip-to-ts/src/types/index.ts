@@ -14,8 +14,8 @@ export interface New {
 
 export interface News {
     status: string;
-    totalResults: number;
-    articles: Array<New>;
+    totalResults?: number;
+    articles?: Array<New>;
 }
 
 export interface Source {
@@ -30,7 +30,7 @@ export interface Source {
 
 export interface Sources {
     status: string;
-    sources: Array<Source>;
+    sources?: Array<Source>;
 }
 
 export enum Errors {
@@ -43,4 +43,4 @@ export type Options = {
     [key: string]: string;
 };
 
-export type Callback<T> = (data?: T) => void;
+export type Callback<T> = (data: T) => void;

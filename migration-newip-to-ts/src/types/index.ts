@@ -1,4 +1,4 @@
-export interface New {
+export interface INew {
     source: {
         id: string;
         name: string;
@@ -12,13 +12,13 @@ export interface New {
     content: string;
 }
 
-export interface News {
+export interface INews {
     status: string;
     totalResults?: number;
-    articles?: New[];
+    articles?: INew[];
 }
 
-export interface Source {
+export interface ISource {
     id: string;
     name: string;
     description: string;
@@ -28,9 +28,9 @@ export interface Source {
     country: string;
 }
 
-export interface Sources {
+export interface ISources {
     status: string;
-    sources?: Source[];
+    sources?: ISource[];
 }
 
 export enum Errors {

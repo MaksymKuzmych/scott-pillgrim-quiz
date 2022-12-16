@@ -1,6 +1,6 @@
 import News from './news/news';
 import Sources from './sources/sources';
-import { New, News as NewsInterface, Source, Sources as SourcesInterface } from '../../types/index';
+import { News as NewsInterface, Sources as SourcesInterface } from '../../types/index';
 
 export class AppView {
     private news: News;
@@ -12,12 +12,12 @@ export class AppView {
     }
 
     drawNews(data: NewsInterface) {
-        const values: Array<New> = data?.articles ? data?.articles : [];
+        const values = data?.articles ? data?.articles : [];
         this.news.draw(values);
     }
 
     drawSources(data: SourcesInterface) {
-        const values: Array<Source> = data?.sources ? data?.sources : [];
+        const values = data?.sources ? data?.sources : [];
         this.sources.draw(values);
     }
 }

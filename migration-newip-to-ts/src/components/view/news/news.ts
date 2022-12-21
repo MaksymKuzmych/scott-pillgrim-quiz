@@ -1,5 +1,6 @@
-import './news.css';
 import { INew } from '../../../types/index';
+
+import './news.css';
 
 class News {
     draw(data: INew[]) {

@@ -6,5 +6,6 @@ import './assets/rs_school_js.svg';
 
 import './global.css';
 
-const app: App = new App();
+const app = new App();
+
 app.start();

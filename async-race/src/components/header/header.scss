@@ -1,0 +1,23 @@
+@import '../../styles/variables.scss';
+
+.header {
+  padding: 10px 20px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  background-color: $blue-dark;
+
+  &__btn {
+    border-radius: 5px;
+    padding: 5px 20px;
+    color: $brown-dark;
+    background-color: $cream;
+    transition: all 0.3s;
+    font-size: 26px;
+
+    &:hover {
+      transform: scale(1.05);
+      color: $brown-light;
+    }
+  }
+}

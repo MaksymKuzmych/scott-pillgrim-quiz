@@ -3,6 +3,7 @@ const path = require('path');
 const { merge } = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const EslintPlugin = require('eslint-webpack-plugin');
 
 const baseConfig = {
@@ -36,11 +37,15 @@ const baseConfig = {
     }),
     new CleanWebpackPlugin(),
     new EslintPlugin({ extensions: 'ts' }),
+    new CopyWebpackPlugin({
+      patterns: [{ from: 'public' }],
+    }),
   ],
 };
 
 module.exports = ({ mode }) => {
   const isProductionMode = mode === 'prod';
+  // eslint-disable-next-line global-require
   const envConfig = isProductionMode ? require('./webpack.prod.config') : require('./webpack.dev.config');
 
   return merge(baseConfig, envConfig);

@@ -1,0 +1,62 @@
+@import '../../styles/variables.scss';
+
+.race {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-bottom: 2px dashed $cream;
+
+  &__tools {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__btn {
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: $brown-dark;
+    background-color: $cream;
+    transition: all 0.3s;
+    font-size: 14px;
+
+    &:hover {
+      transform: scale(1.05);
+      color: $brown-light;
+    }
+  }
+
+  &__track {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__car-name {
+    font-size: 20px;
+    color: $cream;
+  }
+
+  &__car-svg {
+    height: 50px;
+    width: 120px;
+  }
+
+  &__flag-svg {
+    height: 50px;
+    width: 70px;
+    margin: 0 120px 0 auto;
+    align-self: flex-end;
+  }
+}
+
+.track {
+  &__view {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.chosen {
+  background-color: #fcbf49;
+}

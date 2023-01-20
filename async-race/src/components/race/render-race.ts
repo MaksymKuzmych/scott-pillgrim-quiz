@@ -1,0 +1,46 @@
+/* eslint-disable @typescript-eslint/lines-between-class-members */
+import { removeCarListener } from './remove-car';
+import { renderCar } from './render-car';
+import { renderFlag } from './render-flag';
+import { selectCarListener } from './select-car';
+
+export class Race {
+  name: string;
+  color: string;
+  id: number;
+
+  constructor(name: string, color: string, id: number) {
+    this.name = name;
+    this.color = color;
+    this.id = id;
+  }
+
+  renderRace(): HTMLDivElement {
+    const raceContainer = document.createElement('div');
+
+    raceContainer.id = String(this.id);
+    raceContainer.classList.add('race');
+    raceContainer.innerHTML = `
+  <div class="race__tools">
+    <button class="race__btn race__btn_select btn" data-id="${this.id}">SELECT</button>
+    <button class="race__btn race__btn_remove btn" data-id="${this.id}">REMOVE</button>
+    <p class="race__car-name">${this.name}</p>
+  </div>
+  <div class="race__track track">
+    <div class="track__btns">
+      <button class="race__btn race__btn_start btn" data-id="${this.id}">A</button>
+      <button class="race__btn race__btn_stop btn" data-id="${this.id}">B</button>
+    </div>
+    <div class="track__view">
+      ${renderCar(this.color)}
+      ${renderFlag()}
+    </div>
+  </div>
+  `;
+
+    removeCarListener(raceContainer);
+    selectCarListener(raceContainer);
+
+    return raceContainer;
+  }
+}

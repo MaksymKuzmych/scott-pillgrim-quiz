@@ -1,0 +1,46 @@
+@import '../../styles/variables.scss';
+
+.options {
+  margin: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: $cream;
+
+  &__form {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__btn {
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: $brown-dark;
+    background-color: $cream;
+    transition: all 0.3s;
+    font-size: 14px;
+
+    &:hover {
+      transform: scale(1.05);
+      color: $brown-light;
+    }
+  }
+
+  &__tools {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__info {
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  &__page-btns {
+    display: flex;
+    gap: 20px;
+  }
+}

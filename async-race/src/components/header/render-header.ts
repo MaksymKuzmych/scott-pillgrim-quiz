@@ -1,4 +1,4 @@
-export function renderHeader() {
+export function renderHeader(): HTMLElement {
   const headerContainer = document.createElement('div');
 
   headerContainer.classList.add('header');

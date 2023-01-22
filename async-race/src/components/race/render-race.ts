@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/lines-between-class-members */
+import { driveCarListener, resetCarListener } from './drive-car';
 import { removeCarListener } from './remove-car';
 import { renderCar } from './render-car';
 import { renderFlag } from './render-flag';
@@ -40,6 +41,8 @@ export class Race {
 
     removeCarListener(raceContainer);
     selectCarListener(raceContainer);
+    driveCarListener(raceContainer);
+    resetCarListener(raceContainer);
 
     return raceContainer;
   }

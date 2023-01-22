@@ -1,10 +1,11 @@
 import { getCarsLength } from '../../services/read/read-cars-length';
 import { nextBtnListener, prevBtnListener } from './change-page';
 import { createCarListener } from './create-car';
+import { driveAllCarsListener, resetAllCarsListener } from './drive-all-cars';
 import { generateHundredCarsListener } from './generate-hundred-cars';
 import { updatePreventDefault } from './update-car';
 
-export async function renderOptions(page: string): Promise<HTMLDivElement> {
+export async function renderOptions(page: number): Promise<HTMLDivElement> {
   const optionsContainer = document.createElement('div');
   const carsQuantity: string | null = await getCarsLength();
 
@@ -44,6 +45,8 @@ export async function renderOptions(page: string): Promise<HTMLDivElement> {
   generateHundredCarsListener(optionsContainer);
   prevBtnListener(optionsContainer);
   nextBtnListener(optionsContainer);
+  driveAllCarsListener(optionsContainer);
+  resetAllCarsListener(optionsContainer);
 
   return optionsContainer;
 }

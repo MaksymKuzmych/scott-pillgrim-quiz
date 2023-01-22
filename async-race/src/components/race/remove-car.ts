@@ -1,4 +1,5 @@
 import { deleteCar } from '../../services/delete/delete-car';
+import { deleteWinner } from '../../services/delete/delete-winner';
 import { getCarsLength } from '../../services/read/read-cars-length';
 import { renderGarage } from '../../templates/garage/garage-container';
 import { page } from '../../utils/page';
@@ -10,18 +11,19 @@ export function removeCarListener(raceContainer: HTMLDivElement) {
     const carId = removeBtn.dataset.id;
 
     if (carId) {
+      await deleteWinner(+carId);
       await deleteCar(+carId);
 
-      const carLength = await getCarsLength();
+      const carsLength: string | null = await getCarsLength();
 
-      if (carLength) {
-        const lastPage = Math.ceil(+carLength / 7);
+      if (carsLength) {
+        const lastPage = Math.ceil(+carsLength / 7);
 
         if (page.pageNumber > lastPage) {
           page.pageNumber -= 1;
-          await renderGarage(String(page.pageNumber));
+          await renderGarage(page.pageNumber);
         } else {
-          await renderGarage(String(page.pageNumber));
+          await renderGarage(page.pageNumber);
         }
       }
     }

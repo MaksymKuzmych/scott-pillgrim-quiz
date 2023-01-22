@@ -2,7 +2,7 @@ import { renderOptions } from '../../components/garage-options/render-options';
 import { Race } from '../../components/race/render-race';
 import { getCarsByPage } from '../../services/read/read-cars-by-page';
 
-export async function renderGarage(page: string) {
+export async function renderGarage(page: number) {
   const garage = document.createElement('div');
   const main = document.querySelector('.main') as HTMLElement;
 

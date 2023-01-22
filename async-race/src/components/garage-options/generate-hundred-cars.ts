@@ -7,6 +7,6 @@ export function generateHundredCarsListener(optionsContainer: HTMLDivElement) {
 
   generateBtn.addEventListener('click', async () => {
     await postGerenatedCars();
-    await renderGarage(String(page.pageNumber));
+    await renderGarage(page.pageNumber);
   });
 }

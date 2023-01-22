@@ -1,12 +1,12 @@
 import { BASE_URL } from '../../utils/base-url';
 
-export async function updateCar(id: number, name: string, color: string) {
+export async function updateWinner(id: number, wins: number, time: number) {
   const body = {
-    name,
-    color,
+    wins,
+    time,
   };
 
-  await fetch(`${BASE_URL}/garage/${id}`, {
+  await fetch(`${BASE_URL}/winners/${id}`, {
     method: 'PUT',
     headers: {
       'content-type': 'application/json',

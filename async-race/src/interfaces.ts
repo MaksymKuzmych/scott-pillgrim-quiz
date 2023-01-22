@@ -3,3 +3,27 @@ export interface ICar {
   color: string;
   id: number;
 }
+
+export interface IStartOptions {
+  velocity: number;
+  distance: number;
+}
+
+export interface IFinishedCar {
+  id: number;
+  isEngineCrashed: boolean;
+  time: number;
+}
+
+export interface IWinner {
+  id: number;
+  wins: number;
+  time: number;
+}
+
+export enum Errors {
+  OK = 200,
+  Unauthorized = 401,
+  NotFound = 404,
+  internalServerError = 500,
+}

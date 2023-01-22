@@ -8,7 +8,7 @@ export function prevBtnListener(optionsContainer: HTMLDivElement) {
   prevBtn.addEventListener('click', async () => {
     if (page.pageNumber > 1) {
       page.pageNumber -= 1;
-      await renderGarage(String(page.pageNumber));
+      await renderGarage(page.pageNumber);
     }
   });
 }
@@ -24,7 +24,7 @@ export function nextBtnListener(optionsContainer: HTMLDivElement) {
 
       if (page.pageNumber < lastPage) {
         page.pageNumber += 1;
-        await renderGarage(String(page.pageNumber));
+        await renderGarage(page.pageNumber);
       }
     }
   });

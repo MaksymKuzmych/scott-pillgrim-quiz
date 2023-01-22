@@ -15,7 +15,7 @@ export function createCarListener(optionsContainer: HTMLDivElement) {
 
     if (textValue.length > 0) {
       await postCar(textValue, colorValue);
-      await renderGarage(String(page.pageNumber));
+      await renderGarage(page.pageNumber);
     }
   });
 }

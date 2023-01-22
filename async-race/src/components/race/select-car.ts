@@ -17,7 +17,7 @@ export function selectCarListener(raceContainer: HTMLDivElement) {
       selectCarBtn.classList.add('chosen');
       updateCarText.focus();
 
-      updateCarListener(optionsContainer, id);
+      updateCarListener(optionsContainer, +id);
     }
   });
 }

@@ -19,12 +19,11 @@ export function removeCarListener(raceContainer: HTMLDivElement) {
       if (carsLength) {
         const lastPage = Math.ceil(+carsLength / 7);
 
-        if (page.pageNumber > lastPage) {
-          page.pageNumber -= 1;
-          await renderGarage(page.pageNumber);
-        } else {
-          await renderGarage(page.pageNumber);
+        if (page.garagePageNumber > lastPage) {
+          page.garagePageNumber -= 1;
         }
+
+        await renderGarage(page.garagePageNumber);
       }
     }
   });

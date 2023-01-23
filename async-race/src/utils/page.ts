@@ -1,3 +1,4 @@
 export const page = {
-  pageNumber: 1,
+  garagePageNumber: 1,
+  winnersPageNumber: 1,
 };

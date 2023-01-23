@@ -15,7 +15,7 @@ export async function driveCar(raceContainer: HTMLDivElement, status: string) {
   let requestAnimation = null;
   let isEngineCrashed = false;
 
-  function tick() {
+  async function tick() {
     const isReseted = carImage.classList.contains('reseted');
 
     currentX += movePerTick;

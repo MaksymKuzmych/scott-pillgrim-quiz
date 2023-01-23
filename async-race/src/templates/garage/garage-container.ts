@@ -1,4 +1,4 @@
-import { renderOptions } from '../../components/garage-options/render-options';
+import { renderOptions } from '../../components/garage-options/render-garage-options';
 import { Race } from '../../components/race/render-race';
 import { getCarsByPage } from '../../services/read/read-cars-by-page';
 

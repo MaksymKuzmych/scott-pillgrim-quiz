@@ -1,0 +1,40 @@
+@import '../../styles/variables.scss';
+
+.winner {
+  display: flex;
+  gap: 5px;
+  color: $cream;
+  width: 500px;
+  height: 40px;
+  justify-content: space-between;
+  align-items: center;
+
+  &__number {
+    width: 30px;
+    text-align: center;
+    font-size: 20px;
+  }
+
+  &__car-svg {
+    width: 100px;
+    height: 30px;
+    text-align: center;
+  }
+
+  &__name {
+    width: 100px;
+    text-align: center;
+  }
+
+  &__wins {
+    width: 50px;
+    text-align: center;
+    font-size: 20px;
+  }
+
+  &__time {
+    width: 140px;
+    text-align: center;
+    font-size: 20px;
+  }
+}

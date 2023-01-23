@@ -3,6 +3,9 @@
 @import './components/garage-options/garage-options.scss';
 @import './components/race/race.scss';
 @import './templates/garage/garage.scss';
+@import './templates/winners/winners.scss';
+@import './components/winner/winner.scss';
+@import './components/winners-options/winners-options.scss';
 @import './styles/variables.scss';
 
 * {
@@ -39,4 +42,28 @@ html,
   display: flex;
   background-color: $black;
   padding-bottom: 20px;
+}
+
+.hide {
+  display: none;
+}
+
+button:disabled,
+button[disabled] {
+  background-color: $blue-dark;
+  cursor: not-allowed;
+}
+
+button:disabled:hover,
+button[disabled]:hover {
+  color: black;
+}
+
+input[type='submit']:disabled {
+  background-color: $blue-dark;
+  cursor: not-allowed;
+}
+
+input[type='submit']:disabled:hover {
+  color: black;
 }

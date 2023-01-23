@@ -1,7 +1,7 @@
-export function renderCar(color: string): string {
+export function renderCar(color: string, className: string): string {
   return `<svg
     version="1.0"
-    class="race__car-svg"
+    class="${className}"
     xmlns="http://www.w3.org/2000/svg"
     width="1280.000000pt"
     height="640.000000pt"

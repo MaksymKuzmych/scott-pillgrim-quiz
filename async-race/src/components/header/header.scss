@@ -6,6 +6,7 @@
   justify-content: flex-start;
   gap: 20px;
   background-color: $blue-dark;
+  align-items: center;
 
   &__btn {
     border-radius: 5px;
@@ -19,5 +20,10 @@
       transform: scale(1.05);
       color: $brown-light;
     }
+  }
+
+  &__info {
+    color: $cream;
+    font-size: 20px;
   }
 }

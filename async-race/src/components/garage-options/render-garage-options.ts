@@ -1,16 +1,16 @@
 import { getCarsLength } from '../../services/read/read-cars-length';
-import { nextBtnListener, prevBtnListener } from './change-page';
+import { nextBtnListener, prevBtnListener } from './change-garage-page';
 import { createCarListener } from './create-car';
 import { driveAllCarsListener, resetAllCarsListener } from './drive-all-cars';
 import { generateHundredCarsListener } from './generate-hundred-cars';
 import { updatePreventDefault } from './update-car';
 
 export async function renderOptions(page: number): Promise<HTMLDivElement> {
-  const optionsContainer = document.createElement('div');
+  const garageOptionsContainer = document.createElement('div');
   const carsQuantity: string | null = await getCarsLength();
 
-  optionsContainer.classList.add('options');
-  optionsContainer.innerHTML = `
+  garageOptionsContainer.classList.add('options');
+  garageOptionsContainer.innerHTML = `
 <div class="options__create-car create-car">
   <form class="options__form create-car__form">
     <input type="text" class="options__text create-car__text" />
@@ -22,12 +22,12 @@ export async function renderOptions(page: number): Promise<HTMLDivElement> {
   <form class="options__form update-car__form">
     <input type="text" class="options__text update-car__text" />
     <input type="color" class="options__color update-car__color" value="#ffd700"/>
-    <input type="submit" value="UPDATE" class="options__submit update-car__submit options__btn btn" />
+    <input type="submit" value="UPDATE" class="options__submit update-car__submit options__btn btn"/>
   </form>
 </div>
 <div class="options__tools">
   <button class="btn options__btn" id="race">RACE</button>
-  <button class="btn options__btn" id="reset">RESET</button>
+  <button class="btn options__btn" id="reset" disabled>RESET</button>
   <button class="btn options__btn" id="generate">GENERATE CARS</button>
 </div>
 <div class="options__info">
@@ -40,13 +40,13 @@ export async function renderOptions(page: number): Promise<HTMLDivElement> {
 </div>
 `;
 
-  createCarListener(optionsContainer);
-  updatePreventDefault(optionsContainer);
-  generateHundredCarsListener(optionsContainer);
-  prevBtnListener(optionsContainer);
-  nextBtnListener(optionsContainer);
-  driveAllCarsListener(optionsContainer);
-  resetAllCarsListener(optionsContainer);
+  createCarListener(garageOptionsContainer);
+  updatePreventDefault(garageOptionsContainer);
+  generateHundredCarsListener(garageOptionsContainer);
+  prevBtnListener(garageOptionsContainer);
+  nextBtnListener(garageOptionsContainer);
+  driveAllCarsListener(garageOptionsContainer);
+  resetAllCarsListener(garageOptionsContainer);
 
-  return optionsContainer;
+  return garageOptionsContainer;
 }

@@ -1,0 +1,65 @@
+@import '../../styles/variables.scss';
+
+.winners-options {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 500px;
+  color: $cream;
+
+  &__btn {
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 20px;
+    color: $brown-dark;
+    background-color: $cream;
+  }
+
+  &__title {
+    font-size: 30px;
+  }
+
+  &__page {
+    font-size: 26px;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__number {
+    width: 30px;
+    text-align: center;
+  }
+
+  &__car {
+    width: 100px;
+    text-align: center;
+  }
+
+  &__name {
+    width: 100px;
+    text-align: center;
+  }
+
+  &__wins {
+    width: 50px;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 0;
+    color: $brown-dark;
+    background-color: $cream;
+  }
+
+  &__time {
+    width: 140px;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 0;
+    color: $brown-dark;
+    background-color: $cream;
+  }
+}

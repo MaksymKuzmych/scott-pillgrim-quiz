@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/lines-between-class-members */
 import { driveCarListener, resetCarListener } from './drive-car';
 import { removeCarListener } from './remove-car';
-import { renderCar } from './render-car';
+import { renderCar } from '../../utils/render-car';
 import { renderFlag } from './render-flag';
 import { selectCarListener } from './select-car';
 
@@ -30,10 +30,10 @@ export class Race {
   <div class="race__track track">
     <div class="track__btns">
       <button class="race__btn race__btn_start btn" data-id="${this.id}">A</button>
-      <button class="race__btn race__btn_stop btn" data-id="${this.id}">B</button>
+      <button class="race__btn race__btn_stop btn" data-id="${this.id}" disabled>B</button>
     </div>
     <div class="track__view">
-      ${renderCar(this.color)}
+      ${renderCar(this.color, 'race__car-svg')}
       ${renderFlag()}
     </div>
   </div>

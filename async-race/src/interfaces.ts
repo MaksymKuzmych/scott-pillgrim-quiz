@@ -21,9 +21,17 @@ export interface IWinner {
   time: number;
 }
 
+export interface IWinnersOptions {
+  sort: Sort;
+  order: Order;
+}
+
 export enum Errors {
   OK = 200,
   Unauthorized = 401,
   NotFound = 404,
   internalServerError = 500,
 }
+
+export type Sort = 'id' | 'wins' | 'time';
+export type Order = 'ASC' | 'DESC';

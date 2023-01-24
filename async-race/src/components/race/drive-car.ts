@@ -8,17 +8,9 @@ export function driveCarListener(raceContainer: HTMLDivElement) {
 
   driveCarBtn.addEventListener('click', async () => {
     driveCarBtn.disabled = true;
-
+    resetCarBtn.disabled = false;
     carImage.classList.remove('reseted');
-    const promiseForCar: Promise<IFinishedCar> = new Promise((resolve) => {
-      const drive = driveCar(raceContainer, 'started');
-
-      resolve(drive);
-    });
-
-    promiseForCar.then(() => {
-      resetCarBtn.disabled = false;
-    });
+    await driveCar(raceContainer, 'started');
   });
 }
 
@@ -28,9 +20,8 @@ export function resetCarListener(raceContainer: HTMLDivElement) {
   const carImage = raceContainer.querySelector('.race__car-svg') as SVGElement;
 
   resetCarBtn.addEventListener('click', async () => {
-    carImage.classList.add('reseted');
-
     await driveCar(raceContainer, 'stopped');
+    resetCarBtn.disabled = true;
 
     const promiseForCar: Promise<IFinishedCar> = new Promise((resolve) => {
       const drive = driveCar(raceContainer, 'stopped');
@@ -39,8 +30,8 @@ export function resetCarListener(raceContainer: HTMLDivElement) {
     });
 
     promiseForCar.then(() => {
+      carImage.classList.add('reseted');
       driveCarBtn.disabled = false;
-      resetCarBtn.disabled = true;
     });
   });
 }

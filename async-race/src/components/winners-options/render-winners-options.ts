@@ -10,7 +10,7 @@ export async function renderWinnersOptions() {
 
   winnersOptionsContainer.classList.add('winners-options');
   winnersOptionsContainer.innerHTML = `
-  <h2 class="winners-options__title">Winners (${winnersCount})</h2>
+  <h2 class="winners-options__title">Winners ( ${winnersCount} )</h2>
   <h3 class="winners-options__page">Page #
     <span class="winners-options__page_number">${winnersPageNumber}</span>
   </h3>

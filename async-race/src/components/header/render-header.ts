@@ -8,7 +8,6 @@ export function renderHeader(): HTMLElement {
   headerContainer.innerHTML = `
   <button class="header__btn header__btn_garage btn" disabled>Garage</button>
   <button class="header__btn header__btn_winners btn">Winners</button>
-  <p class="header__info hide">Getting ready for the next race</p>
   `;
 
   toWinnersListener(headerContainer);

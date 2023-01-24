@@ -1,58 +1,63 @@
 import { IFinishedCar } from '../../interfaces';
-import { checkAllBtnsWithoutHeader, checkAllNecessaryBtns } from '../../utils/check-buttons';
 import { driveCar } from '../../utils/drive-car';
-import { winnerHandling } from '../../utils/winner-handling';
+import { winnerHandler } from '../../utils/winner-handling';
 
 export function driveAllCarsListener(garageOptionsContainer: HTMLDivElement) {
   const raceBtn = garageOptionsContainer.querySelector('#race') as HTMLButtonElement;
-  const resetBtn = garageOptionsContainer.querySelector('#reset') as HTMLButtonElement;
 
   raceBtn.addEventListener('click', async () => {
     const allRaces = document.querySelectorAll('.race') as NodeListOf<HTMLDivElement>;
     const carImages = document.querySelectorAll('.race__car-svg') as NodeListOf<SVGElement>;
     const promisesForAllCars: Promise<IFinishedCar>[] = [];
 
-    checkAllBtnsWithoutHeader(true);
-    resetBtn.disabled = false;
+    raceBtn.disabled = true;
 
     carImages.forEach((image) => {
       image.classList.remove('reseted');
     });
 
     allRaces.forEach((raceContainer) => {
-      const promiseForCar: Promise<IFinishedCar> = new Promise((resolve) => {
-        resolve(driveCar(raceContainer, 'started'));
+      // eslint-disable-next-line no-async-promise-executor
+      const promiseForCar: Promise<IFinishedCar> = new Promise(async (resolve) => {
+        const drive = await driveCar(raceContainer, 'started');
+
+        if (!drive.isEngineCrashed) {
+          resolve(drive);
+        }
       });
+
       promisesForAllCars.push(promiseForCar);
     });
 
-    await winnerHandling(promisesForAllCars);
+    await winnerHandler(promisesForAllCars);
   });
 }
 
 export function resetAllCarsListener(garageOptionsContainer: HTMLDivElement) {
+  const raceBtn = garageOptionsContainer.querySelector('#race') as HTMLButtonElement;
   const resetBtn = garageOptionsContainer.querySelector('#reset') as HTMLButtonElement;
 
   resetBtn.addEventListener('click', () => {
     const allRaces = document.querySelectorAll('.race') as NodeListOf<HTMLDivElement>;
     const carImages = document.querySelectorAll('.race__car-svg') as NodeListOf<SVGElement>;
-    const headerInfo = document.querySelector('.header__info') as HTMLParagraphElement;
+    const promisesForAllCars: Promise<IFinishedCar>[] = [];
 
-    headerInfo.classList.remove('hide');
     resetBtn.disabled = true;
 
     carImages.forEach((image) => {
       image.classList.add('reseted');
     });
 
-    allRaces.forEach(async (raceContainer) => {
-      await driveCar(raceContainer, 'stopped');
+    allRaces.forEach((raceContainer) => {
+      const promiseForCar: Promise<IFinishedCar> = new Promise((resolve) => {
+        resolve(driveCar(raceContainer, 'stopped'));
+      });
+
+      promisesForAllCars.push(promiseForCar);
     });
 
-    setTimeout(() => {
-      checkAllBtnsWithoutHeader(false);
-      checkAllNecessaryBtns(true);
-      headerInfo.classList.add('hide');
-    }, 6000);
+    Promise.all<Promise<IFinishedCar>[]>(promisesForAllCars).then(() => {
+      raceBtn.disabled = false;
+    });
   });
 }

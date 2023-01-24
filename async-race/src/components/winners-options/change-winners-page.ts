@@ -4,13 +4,19 @@ import { page } from '../../utils/page';
 import { winnersOptions } from '../../utils/winners-options';
 
 export function prevBtnListener(winnersOptionsContainer: HTMLDivElement) {
+  const nextBtn = winnersOptionsContainer.querySelector(
+    '.winners-options__next-btn',
+  ) as HTMLButtonElement;
   const prevBtn = winnersOptionsContainer.querySelector(
     '.winners-options__prev-btn',
   ) as HTMLButtonElement;
-
   const pageNumber = winnersOptionsContainer.querySelector(
     '.winners-options__page_number',
   ) as HTMLSpanElement;
+
+  if (page.winnersPageNumber === 1) {
+    prevBtn.disabled = true;
+  }
 
   prevBtn.addEventListener('click', async () => {
     const winnersPage = document.querySelector('.winners-page') as HTMLDivElement;
@@ -19,6 +25,11 @@ export function prevBtnListener(winnersOptionsContainer: HTMLDivElement) {
 
     if (page.winnersPageNumber > 1) {
       page.winnersPageNumber -= 1;
+      nextBtn.disabled = false;
+
+      if (page.winnersPageNumber === 1) {
+        prevBtn.disabled = true;
+      }
       pageNumber.innerText = String(page.winnersPageNumber);
 
       const newWinnersContainer = await renderWinners(page.winnersPageNumber, sort, order);
@@ -29,14 +40,31 @@ export function prevBtnListener(winnersOptionsContainer: HTMLDivElement) {
   });
 }
 
+async function checkWinnersLastPage(nextBtn: HTMLButtonElement) {
+  const winnersQuantity = await getWinnersLength();
+  const nextBtnClone = nextBtn;
+
+  if (winnersQuantity) {
+    const lastPage = Math.ceil(+winnersQuantity / 7);
+
+    if (page.winnersPageNumber === lastPage) {
+      nextBtnClone.disabled = true;
+    }
+  }
+}
+
 export function nextBtnListener(winnersOptionsContainer: HTMLDivElement) {
   const nextBtn = winnersOptionsContainer.querySelector(
     '.winners-options__next-btn',
   ) as HTMLButtonElement;
-
+  const prevBtn = winnersOptionsContainer.querySelector(
+    '.winners-options__prev-btn',
+  ) as HTMLButtonElement;
   const pageNumber = winnersOptionsContainer.querySelector(
     '.winners-options__page_number',
   ) as HTMLSpanElement;
+
+  checkWinnersLastPage(nextBtn);
 
   nextBtn.addEventListener('click', async () => {
     const winnersPage = document.querySelector('.winners-page') as HTMLDivElement;
@@ -49,6 +77,12 @@ export function nextBtnListener(winnersOptionsContainer: HTMLDivElement) {
 
       if (page.winnersPageNumber < lastPage) {
         page.winnersPageNumber += 1;
+        prevBtn.disabled = false;
+
+        if (page.winnersPageNumber === lastPage) {
+          nextBtn.disabled = true;
+        }
+
         pageNumber.innerText = String(page.winnersPageNumber);
 
         const newWinnersContainer = await renderWinners(page.winnersPageNumber, sort, order);

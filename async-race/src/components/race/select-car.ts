@@ -9,9 +9,9 @@ export function selectCarListener(raceContainer: HTMLDivElement) {
       '.race__btn_select',
     ) as NodeListOf<HTMLButtonElement>;
     const updateCarText = document.querySelector('.update-car__text') as HTMLInputElement;
-    const id = selectCarBtn.dataset.id;
+    const carId = selectCarBtn.dataset.id;
 
-    if (id) {
+    if (carId) {
       selectCarBtns.forEach((btn) => {
         btn.classList.remove('chosen');
       });
@@ -19,7 +19,7 @@ export function selectCarListener(raceContainer: HTMLDivElement) {
       selectCarBtn.classList.add('chosen');
       updateCarText.focus();
 
-      updateCarListener(garageOptionsContainer, +id);
+      updateCarListener(garageOptionsContainer, +carId);
     }
   });
 }

@@ -1,4 +1,4 @@
-import { BASE_URL } from '../../utils/base-url';
+import { postItem } from '../../utils/post-item';
 
 export async function postCar(name: string, color: string) {
   const body = {
@@ -6,11 +6,5 @@ export async function postCar(name: string, color: string) {
     color,
   };
 
-  await fetch(`${BASE_URL}/garage`, {
-    method: 'POST',
-    headers: {
-      'content-type': 'application/json',
-    },
-    body: JSON.stringify(body),
-  });
+  postItem('garage', body);
 }

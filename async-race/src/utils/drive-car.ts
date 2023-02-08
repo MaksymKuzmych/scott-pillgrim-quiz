@@ -1,6 +1,7 @@
 import { Errors } from '../interfaces';
 import { checkEngine } from '../services/update/update-car-drive';
 import { updateCarEngine } from '../services/update/update-car-engine';
+import { MS_IN_SECOND } from './variables';
 
 export async function driveCar(raceContainer: HTMLDivElement, status: string) {
   const carImage = raceContainer.querySelector('.race__car-svg') as SVGElement;
@@ -10,7 +11,8 @@ export async function driveCar(raceContainer: HTMLDivElement, status: string) {
   const endX = trackView.clientWidth - carImage.clientWidth;
   const { distance, velocity } = await updateCarEngine(id, status);
   const duration = Math.ceil(distance / velocity);
-  const frameCount = (duration / 1000) * 60;
+  const framesPerSecond = 60;
+  const frameCount = (duration / MS_IN_SECOND) * framesPerSecond;
   const movePerTick = (endX - currentX) / frameCount;
   let requestAnimation = null;
   let isEngineCrashed = false;

@@ -43,7 +43,7 @@ export async function nextBtnListener(garageOptionsContainer: HTMLDivElement) {
   const nextBtn = garageOptionsContainer.querySelector('#next') as HTMLButtonElement;
   checkLastPage(nextBtn, false);
 
-  nextBtn.addEventListener('click', async () => {
+  nextBtn.addEventListener('click', () => {
     checkLastPage(nextBtn, true);
   });
 }

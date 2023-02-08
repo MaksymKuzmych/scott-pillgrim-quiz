@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/lines-between-class-members */
 import { driveCarListener, resetCarListener } from './drive-car';
 import { removeCarListener } from './remove-car';
 import { renderCar } from '../../utils/render-car';
@@ -7,7 +6,9 @@ import { selectCarListener } from './select-car';
 
 export class Race {
   name: string;
+
   color: string;
+
   id: number;
 
   constructor(name: string, color: string, id: number) {

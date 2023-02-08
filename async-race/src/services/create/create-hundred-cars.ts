@@ -1,4 +1,5 @@
-import { BASE_URL } from '../../utils/base-url';
+import { postItem } from '../../utils/post-item';
+import { WHITE_COLOR_NUMBER } from '../../utils/variables';
 
 const producer = [
   'Nissan',
@@ -53,37 +54,26 @@ function arrayRandElement(array: string[]) {
 }
 
 function generateRandomColor(): string {
-  const whiteColorNumber = 16777215;
-
-  return `#${Math.floor(Math.random() * whiteColorNumber).toString(16)}`;
+  return `#${Math.floor(Math.random() * WHITE_COLOR_NUMBER).toString(16)}`;
 }
 
 function makeHundredRandomCars() {
-  const carsArray = [];
+  const carsArray = Array(100);
+  carsArray.fill(null);
 
-  for (let i = 0; i < 100; i += 1) {
+  return carsArray.map(() => {
     const carName = `${arrayRandElement(producer)} ${arrayRandElement(model)}`;
-    const carObject = {
+    return {
       name: carName,
       color: generateRandomColor(),
     };
-
-    carsArray.push(carObject);
-  }
-
-  return carsArray;
+  });
 }
 
 export async function postGerenatedCars() {
   const carsArray = makeHundredRandomCars();
 
   carsArray.forEach(async (car) => {
-    await fetch(`${BASE_URL}/garage`, {
-      method: 'POST',
-      headers: {
-        'content-type': 'application/json',
-      },
-      body: JSON.stringify(car),
-    });
+    postItem('garage', car);
   });
 }

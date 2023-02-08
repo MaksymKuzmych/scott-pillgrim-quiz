@@ -8,7 +8,7 @@ export function driveAllCarsListener(garageOptionsContainer: HTMLDivElement) {
   raceBtn.addEventListener('click', async () => {
     const allRaces = document.querySelectorAll('.race') as NodeListOf<HTMLDivElement>;
     const carImages = document.querySelectorAll('.race__car-svg') as NodeListOf<SVGElement>;
-    const promisesForAllCars: Promise<IFinishedCar>[] = [];
+    let winner: IFinishedCar | null = null;
 
     raceBtn.disabled = true;
 
@@ -16,20 +16,13 @@ export function driveAllCarsListener(garageOptionsContainer: HTMLDivElement) {
       image.classList.remove('reseted');
     });
 
-    allRaces.forEach((raceContainer) => {
-      // eslint-disable-next-line no-async-promise-executor
-      const promiseForCar: Promise<IFinishedCar> = new Promise(async (resolve) => {
-        const drive = await driveCar(raceContainer, 'started');
-
-        if (!drive.isEngineCrashed) {
-          resolve(drive);
-        }
-      });
-
-      promisesForAllCars.push(promiseForCar);
+    allRaces.forEach(async (raceContainer) => {
+      const drive = await driveCar(raceContainer, 'started');
+      if (!drive.isEngineCrashed && !winner) {
+        winner = drive;
+        winnerHandler(winner);
+      }
     });
-
-    await winnerHandler(promisesForAllCars);
   });
 }
 

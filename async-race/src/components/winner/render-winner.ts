@@ -1,9 +1,10 @@
-/* eslint-disable @typescript-eslint/lines-between-class-members */
 import { renderCar } from '../../utils/render-car';
 
 export class Winner {
   name: string;
+
   color: string;
+
   id: number;
 
   constructor(name: string, color: string, id: number) {

@@ -1,5 +1,5 @@
 import { IWinner } from '../../interfaces';
-import { BASE_URL } from '../../utils/base-url';
+import { postItem } from '../../utils/post-item';
 
 export async function postWinner(id: number, time: number) {
   const body: IWinner = {
@@ -8,11 +8,5 @@ export async function postWinner(id: number, time: number) {
     time,
   };
 
-  await fetch(`${BASE_URL}/winners`, {
-    method: 'POST',
-    headers: {
-      'content-type': 'application/json',
-    },
-    body: JSON.stringify(body),
-  });
+  postItem('winners', body);
 }

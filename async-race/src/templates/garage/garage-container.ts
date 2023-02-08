@@ -11,8 +11,7 @@ export async function renderGarage(page: number) {
 
   const cars = await getCarsByPage(page);
 
-  cars.forEach((car) => {
-    const { name, color, id } = car;
+  cars.forEach(({ name, color, id }) => {
     const race = new Race(name, color, id);
 
     garage.appendChild(race.renderRace());

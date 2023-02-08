@@ -43,9 +43,10 @@ export function prevBtnListener(winnersOptionsContainer: HTMLDivElement) {
 async function checkWinnersLastPage(nextBtn: HTMLButtonElement) {
   const winnersQuantity = await getWinnersLength();
   const nextBtnClone = nextBtn;
+  const carsPerPage = 7;
 
   if (winnersQuantity) {
-    const lastPage = Math.ceil(+winnersQuantity / 7);
+    const lastPage = Math.ceil(+winnersQuantity / carsPerPage);
 
     if (page.winnersPageNumber === lastPage) {
       nextBtnClone.disabled = true;
@@ -71,9 +72,10 @@ export function nextBtnListener(winnersOptionsContainer: HTMLDivElement) {
     const winnersContainer = document.querySelector('.winners') as HTMLDivElement;
     const winnersQuantity = await getWinnersLength();
     const { sort, order } = winnersOptions;
+    const winnersPerPage = 10;
 
     if (winnersQuantity) {
-      const lastPage = Math.ceil(+winnersQuantity / 10);
+      const lastPage = Math.ceil(+winnersQuantity / winnersPerPage);
 
       if (page.winnersPageNumber < lastPage) {
         page.winnersPageNumber += 1;

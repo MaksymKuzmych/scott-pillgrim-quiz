@@ -20,6 +20,19 @@ async function sortByOption(
   winnersPage.appendChild(await renderWinners(page.winnersPageNumber, sortOption, orderOption));
 }
 
+async function sortHandler(btnSpan: HTMLSpanElement, sortOption: Sort) {
+  switch (btnSpan.innerText) {
+    case '↑':
+      await sortByOption(btnSpan, '↓', sortOption, 'DESC');
+      break;
+    case '↓':
+      await sortByOption(btnSpan, '↑', sortOption, 'ASC');
+      break;
+    default:
+      await sortByOption(btnSpan, '↓', sortOption, 'DESC');
+  }
+}
+
 export async function sortByWinsListener(winnersOptionsContainer: HTMLDivElement) {
   const winsBtn = winnersOptionsContainer.querySelector(
     '.winners-options__wins',
@@ -33,16 +46,7 @@ export async function sortByWinsListener(winnersOptionsContainer: HTMLDivElement
 
     timeBtnSpan.innerText = ' ';
 
-    switch (winsBtnSpan.innerText) {
-      case '↑':
-        await sortByOption(winsBtnSpan, '↓', 'wins', 'DESC');
-        break;
-      case '↓':
-        await sortByOption(winsBtnSpan, '↑', 'wins', 'ASC');
-        break;
-      default:
-        await sortByOption(winsBtnSpan, '↓', 'wins', 'DESC');
-    }
+    sortHandler(winsBtnSpan, 'wins');
   });
 }
 
@@ -59,15 +63,6 @@ export async function sortByTimeListener(winnersOptionsContainer: HTMLDivElement
 
     winBtnSpan.innerText = ' ';
 
-    switch (timeBtnSpan.innerText) {
-      case '↑':
-        await sortByOption(timeBtnSpan, '↓', 'time', 'DESC');
-        break;
-      case '↓':
-        await sortByOption(timeBtnSpan, '↑', 'time', 'ASC');
-        break;
-      default:
-        await sortByOption(timeBtnSpan, '↓', 'time', 'DESC');
-    }
+    sortHandler(timeBtnSpan, 'time');
   });
 }

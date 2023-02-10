@@ -5,7 +5,6 @@ export async function getWinners(page: number, sort: string, order: string): Pro
   const winnersResponse: Response = await fetch(
     `${BASE_URL}/winners?_page=${page}&_limit=10&_sort=${sort}&_order=${order}`,
   );
-  const winners: IWinner[] = await winnersResponse.json();
 
-  return winners;
+  return winnersResponse.json();
 }

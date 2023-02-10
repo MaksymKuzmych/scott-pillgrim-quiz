@@ -1,4 +1,4 @@
-import { BASE_URL } from '../../utils/base-url';
+import { putItem } from '../../utils/put-item';
 
 export async function updateWinner(id: number, wins: number, time: number) {
   const body = {
@@ -6,11 +6,5 @@ export async function updateWinner(id: number, wins: number, time: number) {
     time,
   };
 
-  await fetch(`${BASE_URL}/winners/${id}`, {
-    method: 'PUT',
-    headers: {
-      'content-type': 'application/json',
-    },
-    body: JSON.stringify(body),
-  });
+  putItem(id, 'winners', body);
 }

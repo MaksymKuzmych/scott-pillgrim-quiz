@@ -1,4 +1,4 @@
-import { BASE_URL } from '../../utils/base-url';
+import { putItem } from '../../utils/put-item';
 
 export async function updateCar(id: number, name: string, color: string) {
   const body = {
@@ -6,11 +6,5 @@ export async function updateCar(id: number, name: string, color: string) {
     color,
   };
 
-  await fetch(`${BASE_URL}/garage/${id}`, {
-    method: 'PUT',
-    headers: {
-      'content-type': 'application/json',
-    },
-    body: JSON.stringify(body),
-  });
+  putItem(id, 'garage', body);
 }

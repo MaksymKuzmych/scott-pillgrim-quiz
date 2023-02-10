@@ -5,7 +5,6 @@ export async function updateCarEngine(id: number, status: string): Promise<IStar
   const engineResponse = await fetch(`${BASE_URL}/engine?id=${id}&status=${status}`, {
     method: 'PATCH',
   });
-  const engineOptions: IStartOptions = await engineResponse.json();
 
-  return engineOptions;
+  return engineResponse.json();
 }

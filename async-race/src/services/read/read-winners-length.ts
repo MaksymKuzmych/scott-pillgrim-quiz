@@ -2,7 +2,6 @@ import { BASE_URL } from '../../utils/base-url';
 
 export async function getWinnersLength(): Promise<string | null> {
   const carsResponse: Response = await fetch(`${BASE_URL}/winners?_limit=1`, { method: 'HEAD' });
-  const carsQuantity = carsResponse.headers.get('X-Total-Count');
 
-  return carsQuantity;
+  return carsResponse.headers.get('X-Total-Count');
 }

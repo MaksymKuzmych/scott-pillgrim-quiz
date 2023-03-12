@@ -1,0 +1,59 @@
+.description-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .description__background {
+    min-height: 80vh;
+    margin: 5px;
+    background-color: #000;
+    border-radius: 25% 10% / 5% 20%;
+
+    .description {
+      width: 100%;
+      min-height: 80vh;
+      max-width: 700px;
+      display: flex;
+      flex-direction: column;
+      background: url('./assets/img/wallpapers/description.jpg');
+      background-size: auto 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      border: 1px solid #ffbe0b;
+      align-items: center;
+      justify-content: space-between;
+      padding: 50px 10px 20px 10px;
+      border-radius: 25% 10% / 5% 20%;
+      color: #222;
+      gap: 100px;
+
+      .description__info {
+        font-size: 1.3em;
+        line-height: 30px;
+        background: rgba(255, 255, 255, 0.7);
+        border: 1px solid #ffbe0b;
+        border-radius: 25% 10% / 5% 20%;
+        padding: 50px 10px;
+        text-align: center;
+      }
+
+      .btn {
+        font-size: 1.2em;
+        width: 90%;
+        max-width: 400px;
+        padding: 5px;
+        background: #222;
+        color: #fdfffc;
+        transition: all 0.5s;
+        margin-bottom: 10px;
+        border-radius: 10px 100px / 120px;
+
+        &:hover {
+          color: #ffbe0b;
+        }
+      }
+    }
+  }
+}

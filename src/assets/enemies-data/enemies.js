@@ -1,9 +1,9 @@
-import matthewPatel from '../img/enemies/matthew-patel.png'
-import lucasLee from '../img/enemies/lucas-lee.png'
-import roxanneRichter from '../img/enemies/roxanne-richter.png'
-import toddIngram from '../img/enemies/todd-ingram.png'
-import brothersKatayanagi from '../img/enemies/brothers-katayanagi.jpg'
-import gideonGraves from '../img/enemies/gideon-graves.png'
+import matthewPatel from '../img/enemies/matthew-patel.png';
+import lucasLee from '../img/enemies/lucas-lee.png';
+import roxanneRichter from '../img/enemies/roxanne-richter.png';
+import toddIngram from '../img/enemies/todd-ingram.png';
+import brothersKatayanagi from '../img/enemies/brothers-katayanagi.jpg';
+import gideonGraves from '../img/enemies/gideon-graves.png';
 
 const enemiesData = [
   {
@@ -61,6 +61,6 @@ const enemiesData = [
       'Гидеон Гордон Грейвс (Gideon Gordon Graves) - седьмой Злой Бывший Рамоны Флауэрс (Ramona Flowers), лидер и основатель Лиги Злых Бывших и главный злодей. Гидеон - эпический мастермайнд, гений и изобретатель. Он создал Свечение - мощнейшее оружие, также известное как война эмоций. Жертвы Свечения навсегда заключены со своими ошибками в собственном разуме (из-за манипуляций с подпространством в голове жертвы). Сам же Гидеон неподвластен Свечению, так как заточен в собственной голове с рождения.',
     photo: gideonGraves,
   },
-]
+];
 
-export default enemiesData
+export default enemiesData;

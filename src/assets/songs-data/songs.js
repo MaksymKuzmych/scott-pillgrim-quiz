@@ -1,75 +1,75 @@
-import fooFightersSong from '../music/alternative/Foo Fighters - Everlong.mp3'
-import fooFightersPhoto from '../img/alternative/Foo Fighters.jpg'
-import linkinParkSong from '../music/alternative/Linkin Park - In the End.mp3'
-import linkinParkPhoto from '../img/alternative/Linkin Park.jpg'
-import nirvanaSong from '../music/alternative/Nirvana - Smells Like Teen Spirit.mp3'
-import nirvanaPhoto from '../img/alternative/Nirvana.jpg'
-import placeboSong from '../music/alternative/Placebo - Meds.mp3'
-import placeboPhoto from '../img/alternative/Placebo.jpg'
-import redHotChiliPeppersSong from '../music/alternative/Red Hot Chili Peppers - Californication.mp3'
-import redHotChiliPeppersPhoto from '../img/alternative/Red Hot Chili Peppers.jpg'
-import thirtySecondsToMarsSong from '../music/alternative/Thirty Seconds to Mars - Attack.mp3'
-import thirtySecondsToMarsPhoto from '../img/alternative/Thirty Seconds to Mars.jpg'
-import crystalCastlesSong from '../music/electronic/Crystal Castles - Vanished.mp3'
-import crystalCastlesPhoto from '../img/electronic/Crystal Castles.jpg'
-import daftPunkSong from '../music/electronic/Daft Punk - Harder Better Faster Stronger.mp3'
-import daftPunkPhoto from '../img/electronic/Daft Punk.jpg'
-import depecheModeSong from '../music/electronic/Depeche Mode - Enjoy the Silence.mp3'
-import depecheModePhoto from '../img/electronic/Depeche Mode.jpg'
-import gorillazSong from '../music/electronic/Gorillaz - DARE.mp3'
-import gorillazPhoto from '../img/electronic/Gorillaz.jpg'
-import royksoppSong from '../music/electronic/Royksopp - What Else Is There.mp3'
-import royksoppPhoto from '../img/electronic/Royksopp.jpg'
-import theProdigySong from '../music/electronic/The Prodigy - Breathe.mp3'
-import theProdigyPhoto from '../img/electronic/The Prodigy.jpg'
-import arcticMonkeysSong from '../music/indie/Arctic Monkeys - R U Mine.mp3'
-import arcticMonkeysPhoto from '../img/indie/Arctic Monkeys.jpg'
-import phantogramSong from '../music/indie/Phantogram - When Im Small.mp3'
-import phantogramPhoto from '../img/indie/Phantogram.jpg'
-import pixiesSong from '../music/indie/Pixies - Where Is My Mind.mp3'
-import pixiesPhoto from '../img/indie/Pixies.jpg'
-import radioheadSong from '../music/indie/Radiohead - Karma Police.mp3'
-import radioheadPhoto from '../img/indie/Radiohead.jpg'
-import theKillersSong from '../music/indie/The Killers - Mr Brightside.mp3'
-import theKillersPhoto from '../img/indie/The Killers.jpg'
-import theNeighbourhoodSong from '../music/indie/The Neighbourhood - Sweater Weather.mp3'
-import theNeighbourhoodPhoto from '../img/indie/The Neighbourhood.jpg'
-import disturbedSong from '../music/metal/Disturbed - Down with the Sickness.mp3'
-import disturbedPhoto from '../img/metal/Disturbed.jpg'
-import marilynMansonSong from '../music/metal/Marilyn Manson - Sweet Dreams.mp3'
-import marilynMansonPhoto from '../img/metal/Marilyn Manson.jpg'
-import metallicaSong from '../music/metal/Metallica - Nothing Else Matters.mp3'
-import metallicaPhoto from '../img/metal/Metallica.jpg'
-import rammsteinSong from '../music/metal/Rammstein - Mein Herz brennt.mp3'
-import rammsteinPhoto from '../img/metal/Rammstein.jpg'
-import slipknotSong from '../music/metal/Slipknot - Duality.mp3'
-import slipknotPhoto from '../img/metal/Slipknot.jpg'
-import systemOfADownSong from '../music/metal/System of a Down - Toxicity.mp3'
-import systemOfADownPhoto from '../img/metal/System of a Down.jpg'
-import agathaChristieSong from '../music/post-soviet/Агата Кристи - Как на войне.mp3'
-import agathaChristiePhoto from '../img/post-soviet/Агата Кристи.jpg'
-import ariaSong from '../music/post-soviet/Ария - Беспечный Ангел.mp3'
-import ariaPhoto from '../img/post-soviet/Ария.jpg'
-import bi2Song from '../music/post-soviet/Би-2 - Полковнику никто не пишет.mp3'
-import bi2Photo from '../img/post-soviet/Би-2.jpg'
-import civilDefenceSong from '../music/post-soviet/Гражданская оборона - Все идет по плану.mp3'
-import civilDefencePhoto from '../img/post-soviet/Гражданская оборона.jpg'
-import kinoSong from '../music/post-soviet/Кино - Группа крови.mp3'
-import kinoPhoto from '../img/post-soviet/Кино.jpg'
-import kingAndJesterSong from '../music/post-soviet/Король и Шут - Лесник.mp3'
-import kingAndJesterPhoto from '../img/post-soviet/Король и Шут.jpg'
-import blink182Song from '../music/punk/Blink-182 - First Date.mp3'
-import blink182Photo from '../img/punk/Blink-182.jpg'
-import greenDaySong from '../music/punk/Green Day - American Idiot.mp3'
-import greenDayPhoto from '../img/punk/Green Day.jpg'
-import misfitsSong from '../music/punk/Misfits - Hybrid Moments.mp3'
-import misfitsPhoto from '../img/punk/Misfits.jpg'
-import myChemicalRomanceSong from '../music/punk/My Chemical Romance - Na Na Na.mp3'
-import myChemicalRomancePhoto from '../img/punk/My Chemical Romance.jpg'
-import sum41Song from '../music/punk/Sum 41 - Still Waiting.mp3'
-import sum41Photo from '../img/punk/Sum 41.jpg'
-import theOffspringSong from '../music/punk/The Offspring - Youre Gonna Go Far Kid.mp3'
-import theOffspringPhoto from '../img/punk/The Offspring.jpg'
+import fooFightersSong from '../music/alternative/Foo Fighters - Everlong.mp3';
+import fooFightersPhoto from '../img/alternative/Foo Fighters.jpg';
+import linkinParkSong from '../music/alternative/Linkin Park - In the End.mp3';
+import linkinParkPhoto from '../img/alternative/Linkin Park.jpg';
+import nirvanaSong from '../music/alternative/Nirvana - Smells Like Teen Spirit.mp3';
+import nirvanaPhoto from '../img/alternative/Nirvana.jpg';
+import placeboSong from '../music/alternative/Placebo - Meds.mp3';
+import placeboPhoto from '../img/alternative/Placebo.jpg';
+import redHotChiliPeppersSong from '../music/alternative/Red Hot Chili Peppers - Californication.mp3';
+import redHotChiliPeppersPhoto from '../img/alternative/Red Hot Chili Peppers.jpg';
+import thirtySecondsToMarsSong from '../music/alternative/Thirty Seconds to Mars - Attack.mp3';
+import thirtySecondsToMarsPhoto from '../img/alternative/Thirty Seconds to Mars.jpg';
+import crystalCastlesSong from '../music/electronic/Crystal Castles - Vanished.mp3';
+import crystalCastlesPhoto from '../img/electronic/Crystal Castles.jpg';
+import daftPunkSong from '../music/electronic/Daft Punk - Harder Better Faster Stronger.mp3';
+import daftPunkPhoto from '../img/electronic/Daft Punk.jpg';
+import depecheModeSong from '../music/electronic/Depeche Mode - Enjoy the Silence.mp3';
+import depecheModePhoto from '../img/electronic/Depeche Mode.jpg';
+import gorillazSong from '../music/electronic/Gorillaz - DARE.mp3';
+import gorillazPhoto from '../img/electronic/Gorillaz.jpg';
+import royksoppSong from '../music/electronic/Royksopp - What Else Is There.mp3';
+import royksoppPhoto from '../img/electronic/Royksopp.jpg';
+import theProdigySong from '../music/electronic/The Prodigy - Breathe.mp3';
+import theProdigyPhoto from '../img/electronic/The Prodigy.jpg';
+import arcticMonkeysSong from '../music/indie/Arctic Monkeys - R U Mine.mp3';
+import arcticMonkeysPhoto from '../img/indie/Arctic Monkeys.jpg';
+import phantogramSong from '../music/indie/Phantogram - When Im Small.mp3';
+import phantogramPhoto from '../img/indie/Phantogram.jpg';
+import pixiesSong from '../music/indie/Pixies - Where Is My Mind.mp3';
+import pixiesPhoto from '../img/indie/Pixies.jpg';
+import radioheadSong from '../music/indie/Radiohead - Karma Police.mp3';
+import radioheadPhoto from '../img/indie/Radiohead.jpg';
+import theKillersSong from '../music/indie/The Killers - Mr Brightside.mp3';
+import theKillersPhoto from '../img/indie/The Killers.jpg';
+import theNeighbourhoodSong from '../music/indie/The Neighbourhood - Sweater Weather.mp3';
+import theNeighbourhoodPhoto from '../img/indie/The Neighbourhood.jpg';
+import disturbedSong from '../music/metal/Disturbed - Down with the Sickness.mp3';
+import disturbedPhoto from '../img/metal/Disturbed.jpg';
+import marilynMansonSong from '../music/metal/Marilyn Manson - Sweet Dreams.mp3';
+import marilynMansonPhoto from '../img/metal/Marilyn Manson.jpg';
+import metallicaSong from '../music/metal/Metallica - Nothing Else Matters.mp3';
+import metallicaPhoto from '../img/metal/Metallica.jpg';
+import rammsteinSong from '../music/metal/Rammstein - Mein Herz brennt.mp3';
+import rammsteinPhoto from '../img/metal/Rammstein.jpg';
+import slipknotSong from '../music/metal/Slipknot - Duality.mp3';
+import slipknotPhoto from '../img/metal/Slipknot.jpg';
+import systemOfADownSong from '../music/metal/System of a Down - Toxicity.mp3';
+import systemOfADownPhoto from '../img/metal/System of a Down.jpg';
+import agathaChristieSong from '../music/post-soviet/Агата Кристи - Как на войне.mp3';
+import agathaChristiePhoto from '../img/post-soviet/Агата Кристи.jpg';
+import ariaSong from '../music/post-soviet/Ария - Беспечный Ангел.mp3';
+import ariaPhoto from '../img/post-soviet/Ария.jpg';
+import bi2Song from '../music/post-soviet/Би-2 - Полковнику никто не пишет.mp3';
+import bi2Photo from '../img/post-soviet/Би-2.jpg';
+import civilDefenceSong from '../music/post-soviet/Гражданская оборона - Все идет по плану.mp3';
+import civilDefencePhoto from '../img/post-soviet/Гражданская оборона.jpg';
+import kinoSong from '../music/post-soviet/Кино - Группа крови.mp3';
+import kinoPhoto from '../img/post-soviet/Кино.jpg';
+import kingAndJesterSong from '../music/post-soviet/Король и Шут - Лесник.mp3';
+import kingAndJesterPhoto from '../img/post-soviet/Король и Шут.jpg';
+import blink182Song from '../music/punk/Blink-182 - First Date.mp3';
+import blink182Photo from '../img/punk/Blink-182.jpg';
+import greenDaySong from '../music/punk/Green Day - American Idiot.mp3';
+import greenDayPhoto from '../img/punk/Green Day.jpg';
+import misfitsSong from '../music/punk/Misfits - Hybrid Moments.mp3';
+import misfitsPhoto from '../img/punk/Misfits.jpg';
+import myChemicalRomanceSong from '../music/punk/My Chemical Romance - Na Na Na.mp3';
+import myChemicalRomancePhoto from '../img/punk/My Chemical Romance.jpg';
+import sum41Song from '../music/punk/Sum 41 - Still Waiting.mp3';
+import sum41Photo from '../img/punk/Sum 41.jpg';
+import theOffspringSong from '../music/punk/The Offspring - Youre Gonna Go Far Kid.mp3';
+import theOffspringPhoto from '../img/punk/The Offspring.jpg';
 
 const songsData = [
   [
@@ -516,6 +516,6 @@ const songsData = [
       audio: theOffspringSong,
     },
   ],
-]
+];
 
-export default songsData
+export default songsData;
